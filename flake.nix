@@ -40,16 +40,16 @@
     overlays = import ./overlays {inherit inputs;};
     nixosConfigurations = {
       computer = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = ["${self}/hosts/computer"];
+        specialArgs = { inherit inputs outputs; };
+        modules = [ ./hosts/computer ];
       };
     };
-    
+
     homeConfigurations = {
       "mike@computer" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/mike/mike.nix];
+        modules = [./home/mike/computer.nix];
       };
     };
   };
