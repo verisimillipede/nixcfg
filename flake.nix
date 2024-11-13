@@ -11,18 +11,27 @@
   '';
 
   inputs = {
+
+    # home-manager
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+   # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+
+    # Zen Browser
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = {
     self,
     home-manager,
     nixpkgs,
+    nixpkgs-stable,
+    zen-browser,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -48,8 +57,27 @@
     homeConfigurations = {
       "mike@computer" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/mike/computer.nix];
+        extraSpecialArgs = {inherit self inputs outputs;};
+        modules = [
+          ./home/mike/computer.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+          }
+        ];
+      };
+      "mike@laptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit self inputs outputs;};
+        modules = [
+          ./home/mike/laptop.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+          }
+        ];
       };
     };
   };
