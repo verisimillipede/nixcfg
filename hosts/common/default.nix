@@ -3,6 +3,7 @@
   lib,
   inputs,
   outputs,
+  pkgs,
   ...
 }: {
   nixpkgs = {
