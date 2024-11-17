@@ -123,6 +123,8 @@
     taskwarrior3 # Taskwarrior is Free and Open Source Software that manages your TODO list from the command line
     spotify
     devenv
+    cowsay
+    ponysay
 
     darktable
     gimp
