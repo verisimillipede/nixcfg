@@ -34,6 +34,8 @@
   # Pulseaudio
   hardware.pulseaudio.enable = false;
 
+
+
   # Services
   services = {
 
@@ -76,6 +78,7 @@
       };
     };
 
+
     # Xserver
     xserver = {
       enable = true;
@@ -88,6 +91,11 @@
       };
     };
   };
+
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
