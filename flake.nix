@@ -12,11 +12,6 @@
 
   inputs = {
 
-    # home-manager
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
    # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -24,6 +19,12 @@
 
     # Zen Browser
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+
+    # home-manager
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
