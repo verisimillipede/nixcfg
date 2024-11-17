@@ -6,6 +6,16 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./users
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
+  home-manager = {
+    useGlobalPkgs = true;
+    extraSpecialArgs = { inherit inputs outputs; };
+  };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -32,9 +42,11 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  environmet.systemPackages = with pkgs [
+
+  environment.systemPackages = with pkgs; [
     wl-clipboard
   ];
+
 
   nix = {
     settings = {
@@ -54,4 +66,5 @@
       ((lib.filterAttrs (_: lib.isType "flake")) inputs);
     nixPath = ["/etc/nix/path"];
   };
+
 }
