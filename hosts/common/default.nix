@@ -32,6 +32,9 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  environmet.systemPackages = with pkgs [
+    wl-clipboard
+  ];
 
   nix = {
     settings = {
