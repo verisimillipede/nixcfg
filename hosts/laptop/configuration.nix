@@ -16,11 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "laptop"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -31,35 +26,11 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mike = {
-    isNormalUser = true;
-    description = "mike";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
-  };
-
-  home-manager = {
-    useUserPackages = true;
-    extraSpecialArgs = { inherit inputs outputs; };
-    users.mike =
-        import ../../home/mike/${config.networking.hostName}.nix;
-  };
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # Pulseaudio
   hardware.pulseaudio.enable = false;
@@ -118,13 +89,7 @@
       };
     };
 
-    # desktopManager.cosmic.enable = false;
-    # displayManager.cosmic-greeter.enable = false;
   };
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
