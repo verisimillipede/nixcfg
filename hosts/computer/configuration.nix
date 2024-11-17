@@ -35,6 +35,20 @@
   hardware.pulseaudio.enable = false;
 
 
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.mike = {
+    isNormalUser = true;
+    description = "mike";
+    extraGroups = [ "networkmanager" "wheel" "plocate" ];
+    packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
+  };
+
+  home-manager = {
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs outputs; };
+    users.mike =
+        import ../../home/mike/${config.networking.hostName}.nix;
+  };
 
   # Services
   services = {
@@ -81,11 +95,9 @@
 
     # Xserver
     xserver = {
-      # enable = true;
-      # displayManager.sddm.enable = true;
-      # displayManager.sddm.wayland.enable = true;
-      # displayManager.gdm.enable = true;
-      # desktopManager.gnome.enable = true;
+      enable = true;
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
 
       xkb = {
         layout = "us";
@@ -94,10 +106,10 @@
     };
   };
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
