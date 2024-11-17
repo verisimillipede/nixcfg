@@ -113,7 +113,7 @@
 
     neovim
     streamrip
-
+    neomutt
 
     starship # The minimal, blazing-fast, and infinitely customizable prompt for any shell
 
