@@ -130,6 +130,7 @@
     gimp
     go
     poetry
+    wofi
 
     cheat
     tldr
