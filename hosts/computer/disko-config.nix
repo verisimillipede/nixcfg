@@ -31,7 +31,7 @@
     zpool = {
       zroot = {
         type = "zpool";
-        mountpoint = "none";
+        mountpoint = null;
         datasets = {
           root = {
             type = "zfs_fs";
