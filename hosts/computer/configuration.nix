@@ -19,6 +19,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.hostId = "deadbeef";
 
   # Set your time zone.
   time.timeZone = "America/Edmonton";
