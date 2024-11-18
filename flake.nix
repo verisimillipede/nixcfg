@@ -25,14 +25,20 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
-    home-manager,
     nixpkgs,
     nixpkgs-stable,
     zen-browser,
+    home-manager,
+    disko,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -51,7 +57,10 @@
     nixosConfigurations = {
       computer = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
-        modules = [ ./hosts/computer ];
+        modules = [ 
+          ./hosts/computer
+        inputs.disko.nixosModules.disko
+        ];
       };
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
