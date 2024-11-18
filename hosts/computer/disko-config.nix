@@ -22,38 +22,26 @@
               content = {
                 type = "zfs";
                 pool = "zroot";
-                # Consider adding compression options here
-                compression = "zstd";
               };
             };
           };
         };
       };
     };
-  };
-  zpool = {
-    zroot = {
-      type = "zpool";
-      mountpoint = "/";
-      # Consider adding pool-wide options here
-      options = {
-        ashift = "12";
-        autotrim = "on";
-      };
-      datasets = {
-        root = {
-          type = "zfs_fs";
-          mountpoint = "/";
+    zpool = {
+      zroot = {
+        type = "zpool";
+        mountpoint = "/";
+        datasets = {
+          root = {
+            type = "zfs_fs";
+            mountpoint = "/";
+          };
+          home = {
+            type = "zfs_fs";
+            mountpoint = "/home";
+          };
         };
-        home = {
-          type = "zfs_fs";
-          mountpoint = "/home";
-        };
-        # Consider adding more datasets if needed
-        # nix = {
-        #   type = "zfs_fs";
-        #   mountpoint = "/nix";
-        # };
       };
     };
   };
