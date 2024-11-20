@@ -46,8 +46,8 @@
     wl-clipboard
   ];
 
-  users.defaultUserShell = pkgs.fish;
-  programs.fish.enable = true;
+  # users.defaultUserShell = pkgs.fish;
+  # programs.fish.enable = true;
 
   nix = {
     settings = {
