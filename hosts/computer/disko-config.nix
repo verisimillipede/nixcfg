@@ -1,14 +1,14 @@
 {
   disko.devices = {
     disk = {
-      nixos = {
+      nvme0n1 = {
         type = "disk";
         device = "/dev/nvme0n1";
         content = {
           type = "gpt";
           partitions = {
             ESP = {
-              size = "512M";
+              size = "1G";
               type = "EF00";
               content = {
                 type = "filesystem";
@@ -31,7 +31,17 @@
     zpool = {
       zroot = {
         type = "zpool";
-        mountpoint = null;
+        options = {
+          ashift = "12";
+        };
+        rootFsOptions = {
+          acltype = "posixacl";
+          atime = "off";
+          compression = "lz4";
+          mountpoint = "none";
+          xattr = "sa";
+          "com.sun:auto-snapshot" = "true";
+        };
         datasets = {
           root = {
             type = "zfs_fs";
