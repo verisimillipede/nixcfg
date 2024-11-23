@@ -12,14 +12,26 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "computer"; # Define your hostname.
+  boot.supportedFilesystems = [ "zfs" ];
+  services.zfs.autoScrub.enable = true;
+  # boot.zfs.requestEncryptionCredentials = true;
+
+  boot.loader.grub = {
+    enable = true;
+    zfsSupport = true;
+    efiSupport = true;
+    efiInstallAsRemovable = true;
+  };
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostId = "deadbeef";
+  networking.hostId = "ifb830ce1"; # Define your hostId
+
+  networking.hostName = "computer"; # Define your hostname.
+
 
   # Set your time zone.
   time.timeZone = "America/Edmonton";
@@ -54,11 +66,14 @@
 
   # Services
   services = {
-
+    zfs = {
+      enable = true;
+      autoScrub.enable = true;
+      autoSnapshot.enable = true;
+    };
     # Keyd
     keyd = {
       enable = true;
-
       # Swap capslock with ctrl + esc
       keyboards.default.settings = {
         main = {
@@ -67,24 +82,19 @@
         };
       };
     };
-
     # Tailscale
     tailscale.enable = true;
-
     # Printing
     printing = {
       enable = true;
       drivers = [ pkgs.brlaser ];
     };
-
     # Avahi
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
     };
-
-
     # Pipewire
     pipewire = {
       enable = true;
@@ -93,14 +103,11 @@
         support32Bit = true;
       };
     };
-
-
     # Xserver
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
-
       xkb = {
         layout = "us";
         variant = "";
