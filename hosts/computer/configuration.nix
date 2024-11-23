@@ -36,9 +36,6 @@
   # Pulseaudio
   hardware.pulseaudio.enable = false;
 
-  environment.systemPackages = with pkgs; [
-    zfs
-  ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mike = {
