@@ -69,17 +69,17 @@
     };
 
     homeConfigurations = {
-      # "mike@computer" = home-manager.lib.homeManagerConfiguration {
-      #   pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      #   extraSpecialArgs = {inherit self inputs outputs;};
-      #   modules = [
-      #     ./home/mike/computer.nix
-      #     home-manager.nixosModules.home-manager
-      #     {
-      #       home-manager.useGlobalPkgs = true;
-      #     }
-      #   ];
-      # };
+      "mike@computer" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit self inputs outputs;};
+        modules = [
+          ./home/mike/computer.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+          }
+        ];
+      };
       "mike@laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit self inputs outputs;};
