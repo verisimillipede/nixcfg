@@ -12,19 +12,19 @@
     ];
 
   # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   boot.supportedFilesystems = [ "zfs" ];
   # boot.zfs.requestEncryptionCredentials = true;
 
-  boot.loader.grub = {
-    enable = true;
-    zfsSupport = true;
-    efiSupport = true;
-    efiInstallAsRemovable = true;
-    devices = [ "/dev/nvme0n1" ];
-  };
+  # boot.loader.grub = {
+  #   enable = true;
+  #   zfsSupport = true;
+  #   efiSupport = true;
+  #   efiInstallAsRemovable = true;
+  #   devices = [ "/dev/nvme0n1" ];
+  # };
 
   # Enable networking
   networking.networkmanager.enable = true;
