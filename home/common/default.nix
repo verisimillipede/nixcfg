@@ -1,4 +1,4 @@
-{ config, lib, outputs, pkgs, ... }: {
+{ config, lib, inputs, outputs, pkgs, ... }: {
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -24,6 +24,11 @@
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
     };
+  };
+
+  home-manager = {
+    useUserPackages = true;
+    extraSpecialArgs = {inherit inputs outputs;};
   };
 
   nix = {
