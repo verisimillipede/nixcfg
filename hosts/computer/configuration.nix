@@ -16,7 +16,6 @@
   # boot.loader.efi.canTouchEfiVariables = true;
 
   boot.supportedFilesystems = [ "zfs" ];
-  services.zfs.autoScrub.enable = true;
   # boot.zfs.requestEncryptionCredentials = true;
 
   boot.loader.grub = {
@@ -66,7 +65,6 @@
   # Services
   services = {
     zfs = {
-      enable = true;
       autoScrub.enable = true;
       autoSnapshot.enable = true;
     };
