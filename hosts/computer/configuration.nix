@@ -23,11 +23,12 @@
     zfsSupport = true;
     efiSupport = true;
     efiInstallAsRemovable = true;
+    devices = [ "/dev/nvme0n1" ];
   };
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostId = "ifb830ce1"; # Define your hostId
+  networking.hostId = "9de159a6"; # Define your hostId
 
   networking.hostName = "computer"; # Define your hostname.
 
