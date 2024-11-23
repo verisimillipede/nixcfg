@@ -26,10 +26,6 @@
     };
   };
 
-  home-manager = {
-    useUserPackages = true;
-    extraSpecialArgs = {inherit inputs outputs;};
-  };
 
   nix = {
     package = lib.mkDefault pkgs.nix;

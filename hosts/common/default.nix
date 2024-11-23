@@ -12,7 +12,8 @@
   ];
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
+    useUserPackages = true;
+    extraSpecialArgs = {inherit inputs outputs;};
   };
 
   nixpkgs = {
