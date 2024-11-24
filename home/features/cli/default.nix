@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [ 
+  imports = [
     ./fish.nix
     ./starship.nix
   ];
@@ -13,7 +13,6 @@
       enable = true;
       enableFishIntegration = true;
       enableBashIntegration = true;
-      extraOptions = ["-l" "--icons" "-a" "--git"];
     };
     bat = {
       enable = true;
