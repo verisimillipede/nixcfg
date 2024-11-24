@@ -33,7 +33,6 @@
     # Version Control
     gh # GitHub’s official command line tool
     git # The fast distributed version control system
-    lazygit # Simple terminal UI for git commands
 
     # Terminal Multiplexers
     tmux # Terminal multiplexer
@@ -42,7 +41,6 @@
     plexamp # A music player for Plex Pass users
 
     # Formatting Tools
-    alejandra # A code formatter for Nix
     cargo
 
     # Shells
@@ -68,7 +66,6 @@
     planify
     cmake
     ninja
-    gcc
 
     # Archives
     zip # Package and compress (archive) files
@@ -77,8 +74,6 @@
     p7zip # Command-line version of 7-Zip
 
     # Search Utilities
-    ripgrep # Recursively searches directories for a regex pattern
-    eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
 
     # Networking Tools
@@ -98,7 +93,6 @@
 
     # Productivity
     hugo # Static site generator
-    yazi
     file
     kitty
 
@@ -106,8 +100,6 @@
     nodejs_22
     lua # Lua programming language
     luarocks
-    direnv # Environment switcher for the shell
-    nix-direnv # direnv integration for nix
 
     inputs.zen-browser.packages."${system}".specific # Zen Browser
     marksman
@@ -123,7 +115,6 @@
     duplicati # Free backup software to store encrypted backups online
     taskwarrior3 # Taskwarrior is Free and Open Source Software that manages your TODO list from the command line
     spotify
-    devenv
     cowsay
     ponysay
 
