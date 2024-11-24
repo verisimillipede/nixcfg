@@ -12,10 +12,13 @@
     eza = {
       enable = true;
       enableFishIntegration = true;
-      enableBashIntegration = true;
     };
     bat = {
       enable = true;
+    };
+    atuin = {
+      enable = true;
+      enableFishIntegration = true;
     };
   };
 
