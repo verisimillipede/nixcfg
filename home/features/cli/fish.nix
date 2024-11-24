@@ -12,6 +12,8 @@ in {
     programs.fish = {
       enable = true;
       loginShellInit = ''
+        set -g fish_greeting
+        fish_vi_key_bindings
         set -x TERMINAL kitty
         set -x EDITOR nvim
         set -x VISUAL zed
