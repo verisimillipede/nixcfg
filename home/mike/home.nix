@@ -57,6 +57,7 @@
     bottom # A graphical process/system monitor for the terminal
     python312 # Python programming language
     python312Packages.numpy
+    python312Packages.pip
     python3
     neofetch # A command-line system information tool
     nnn # Terminal file manager
@@ -95,6 +96,7 @@
     hugo # Static site generator
     file
     kitty
+    pipx
 
     nodejs
     nodejs_22
