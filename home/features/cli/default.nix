@@ -44,7 +44,6 @@
     wttrbar
     wireguard-tools
     yazi
-    zellij-ps
     zip
   ];
 }
