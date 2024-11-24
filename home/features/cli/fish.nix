@@ -45,7 +45,7 @@ in {
         cat = "bat";
         cp = "cp -v";
         mv = "mv -v";
-        rm = "rm -%";
+        rm = "rm {}";
         mkdir = "mkdir -pv";
         grep = "rg";
         ps = "procs";
@@ -69,7 +69,7 @@ in {
         gs = "git status";
         gp = "git pull";
         ga = "git add";
-        gc = "git commit -m '%'";
+        gc = "git commit -m \"{}\"";
         gco = "git checkout";
         gd = "git diff";
         gpa = "git push codeberg main && git push github main";
@@ -77,16 +77,24 @@ in {
 
         # Neovim/Editor Commands
         nv = "nvim .";
+        ns = "nvim -S Session.vim";
+        nxv = "nix run ~/dotfiles/nixvim";
         vi = "nvim";
         vim = "nvim";
 
         # SSH
         prawn = "ssh prawn@chappie";
+        zilla = "ssh zilla@mothra";
+        toad = "ssh toad@archlinux";
 
         # Python & Virtual Environments
         p = "python";
         pm = "python main.py";
+        d = "deactivate";
+        ev = "source (poetry env info --path)/bin/activate.fish";
 
+        # Project Directories
+        zz = "cd ~/Projects/Zealot; nix-shell --run 'cd ~/Projects/Zealot/Zealot; exec fish'";
 
         # Directory Navigation
         "-" = "cd ..";
@@ -96,10 +104,10 @@ in {
         "....." = "cd ../../../..";
 
         # Streamrip
-        fetch = "rip search qobuz album '%'";
-        tfetch = "rip search tidal album '%'";
-        fetchndb = "rip -ndb search qobuz album '%'";
-        tfetchndb = "rip -ndb search tidal album '%'";
+        fetch = "rip search qobuz album '{}'";
+        tfetch = "rip search tidal album '{}'";
+        fetchndb = "rip -ndb search qobuz album '{}'";
+        tfetchndb = "rip -ndb search tidal album '{}'";
 
         # Tailscale
         tsu = "sudo tailscale up";
