@@ -33,6 +33,7 @@
     lf
     lazygit
     nix-index
+    nix-direnv
     procs
     progress
     ripgrep
