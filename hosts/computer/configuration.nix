@@ -1,21 +1,25 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, inputs, outputs, lib, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./disko-config.nix
-    ];
+  config,
+  inputs,
+  outputs,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./disko-config.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.supportedFilesystems = [ "zfs" ];
+  boot.supportedFilesystems = ["zfs"];
   # boot.zfs.requestEncryptionCredentials = true;
 
   # boot.loader.grub = {
@@ -32,7 +36,6 @@
 
   networking.hostName = "computer"; # Define your hostname.
 
-
   # Set your time zone.
   time.timeZone = "America/Edmonton";
 
@@ -47,20 +50,19 @@
   # Pulseaudio
   hardware.pulseaudio.enable = false;
 
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mike = {
     isNormalUser = true;
     description = "mike";
-    extraGroups = [ "networkmanager" "wheel" "plocate" ];
-    packages = [ inputs.home-manager.packages.${pkgs.system}.default ];
+    extraGroups = ["networkmanager" "wheel" "plocate"];
+    packages = [inputs.home-manager.packages.${pkgs.system}.default];
   };
 
   home-manager = {
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {inherit inputs outputs;};
     users.mike =
-        import ../../home/mike/${config.networking.hostName}.nix;
+      import ../../home/mike/${config.networking.hostName}.nix;
   };
 
   # Services
@@ -85,7 +87,7 @@
     # Printing
     printing = {
       enable = true;
-      drivers = [ pkgs.brlaser ];
+      drivers = [pkgs.brlaser];
     };
     # Avahi
     avahi = {
@@ -124,5 +126,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

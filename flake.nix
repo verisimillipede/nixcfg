@@ -11,9 +11,7 @@
   '';
 
   inputs = {
-
-
-   # nixpkgs
+    # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
@@ -56,15 +54,15 @@
     overlays = import ./overlays {inherit inputs;};
     nixosConfigurations = {
       computer = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; };
+        specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/computer
-        inputs.disko.nixosModules.disko
+          inputs.disko.nixosModules.disko
         ];
       };
       laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; };
-        modules = [ ./hosts/laptop ];
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/laptop];
       };
     };
 
@@ -72,12 +70,12 @@
       "mike@computer" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit self inputs outputs;};
-        modules = [ ./home/mike/computer.nix ];
+        modules = [./home/mike/computer.nix];
       };
       "mike@laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit self inputs outputs;};
-        modules = [ ./home/mike/laptop.nix ];
+        modules = [./home/mike/laptop.nix];
       };
     };
   };

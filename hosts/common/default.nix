@@ -45,8 +45,8 @@
     wl-clipboard
   ];
 
-  # users.defaultUserShell = pkgs.fish;
-  # programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = true;
 
   nix = {
     settings = {
@@ -66,5 +66,4 @@
       ((lib.filterAttrs (_: lib.isType "flake")) inputs);
     nixPath = ["/etc/nix/path"];
   };
-
 }

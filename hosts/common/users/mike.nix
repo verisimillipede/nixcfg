@@ -15,4 +15,3 @@
   home-manager.users.mike =
     import ../../../home/mike/${config.networking.hostName}.nix;
 }
-
