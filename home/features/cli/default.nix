@@ -2,12 +2,12 @@
   programs = {
     zoxide = {
       enable = true;
-      enablefishintegration = true;
+      enableFishIntegration = true;
     };
     eza = {
       enable = true;
-      enablefishintegration = true;
-      enablebashintegration = true;
+      enableFishIntegration = true;
+      enableBashIntegration = true;
       extraOptions = ["-l" "--icons" "-a" "--git"];
     };
     bat = {
