@@ -103,15 +103,27 @@ in {
         "...." = "cd ../../..";
         "....." = "cd ../../../..";
 
-        # Streamrip
-        fetch = "rip search qobuz album '{}'";
-        tfetch = "rip search tidal album '{}'";
-        fetchndb = "rip -ndb search qobuz album '{}'";
-        tfetchndb = "rip -ndb search tidal album '{}'";
-
         # Tailscale
         tsu = "sudo tailscale up";
         tsd = "sudo tailscale down";
+
+        # Streamrip Commands
+        fetch = {
+          expansion = "rip search qobuz album '%'";
+          setCursor = true;
+        };
+        tfetch = {
+          expansion = "rip search tidal album '%'";
+          setCursor = true;
+        };
+        fetchndb = {
+          expansion = "rip -ndb search qobuz album '%'";
+          setCursor = true;
+        };
+        tfetchndb = {
+          expansion = "rip -ndb search tidal album '%'";
+          setCursor = true;
+        };
       };
     };
   };
