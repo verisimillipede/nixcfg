@@ -13,6 +13,8 @@ in {
       enable = true;
       loginShellInit = ''
         set -g fish_greeting ""
+        set PATH $PATH /home/mike/.local/bin /usr/bin /usr/local/bin /usr/local/sbin /home/mike/.local/share/nvim/mason/bin /home/mike/.local/share/nvim/mason/packages/python-lsp-server/venv/bin
+
         fish_vi_key_bindings
         set -x TERMINAL kitty
         set -x EDITOR nvim
