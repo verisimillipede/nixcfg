@@ -43,8 +43,6 @@
     # Formatting Tools
     cargo
 
-    # Shells
-    fish # Friendly interactive shell
 
     # Command History
     atuin # Replaces your existing shell history

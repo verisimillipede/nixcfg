@@ -5,7 +5,7 @@
     ../common
   ];
 
-  # features.cli = {
-  #   fish.enable = true;
-  # };
+  features.cli = {
+    fish.enable = true;
+  };
 }
