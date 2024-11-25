@@ -25,6 +25,7 @@
   home.packages = with pkgs; [
     alejandra
     bc
+    netcat
     comma
     coreutils
     devenv
