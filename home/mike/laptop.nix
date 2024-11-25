@@ -7,6 +7,5 @@
 
   features.cli = {
     fish.enable = true;
-    starship.enable = true;
   };
 }

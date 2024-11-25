@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./fish.nix
-    ./starship.nix
   ];
 
   programs = {
@@ -17,6 +16,10 @@
       enable = true;
     };
     atuin = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    starship = {
       enable = true;
       enableFishIntegration = true;
     };
