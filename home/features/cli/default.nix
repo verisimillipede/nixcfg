@@ -42,6 +42,7 @@
     lazygit
     nix-index
     nix-direnv
+    nix-output-monitor
     procs
     progress
     ripgrep
