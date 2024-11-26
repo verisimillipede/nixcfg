@@ -3,27 +3,27 @@
     ./fish.nix
   ];
 
-  # programs = {
-  #   zoxide = {
-  #     enable = true;
-  #     enableFishIntegration = true;
-  #   };
-  #   eza = {
-  #     enable = true;
-  #     enableFishIntegration = true;
-  #   };
-  #   bat = {
-  #     enable = true;
-  #   };
-  #   atuin = {
-  #     enable = true;
-  #     enableFishIntegration = true;
-  #   };
-  #   starship = {
-  #     enable = true;
-  #     enableFishIntegration = true;
-  #   };
-  # };
+  programs = {
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    eza = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    bat = {
+      enable = true;
+    };
+    atuin = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+  };
 
   home.packages = with pkgs; [
     alejandra
