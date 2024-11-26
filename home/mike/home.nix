@@ -16,13 +16,9 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # Terminal Emulators
-    alacritty # A fast, lightweight terminal emulator
-
     # Note-taking & Office
     obsidian # A powerful knowledge base that works on local Markdown files
     libreoffice-still # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
-    doing
 
     # Email Clients
     thunderbird # A free and open-source email, newsfeed, chat, and calendaring client
@@ -30,29 +26,13 @@
     # Web Browsers
     firefox # A free and open-source web browser
 
-    # Version Control
-    gh # GitHub’s official command line tool
-    git # The fast distributed version control system
-
-    # Terminal Multiplexers
-    tmux # Terminal multiplexer
-
     # Media
     plexamp # A music player for Plex Pass users
 
     # Formatting Tools
     cargo
 
-
-    # Command History
-    atuin # Replaces your existing shell history
-
     # Utilities
-    bat # A cat clone with syntax highlighting
-    ncdu # Disk usage analyzer with an ncurses interface
-    plocate # A locate command implementation
-    zoxide # A smarter cd command
-    bottom # A graphical process/system monitor for the terminal
     python312 # Python programming language
     python312Packages.numpy
     python312Packages.pip
@@ -173,7 +153,13 @@
   #  /etc/profiles/per-user/m3tam3re/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    BROWSER = "zen-browser";
+    TERMINAL = "kitty";
+    HOME = "/home/mike";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    MAIL = "$HOME/Mail";
   };
 
   programs = {
@@ -187,13 +173,6 @@
         safe.directory = "home/mike/dotfiles";
       };
     };
-
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-      # enableFishIntegration = true;
-    };
-
     home-manager.enable = true;
   };
   # Nicely reload system units when changing configs
