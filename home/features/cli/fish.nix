@@ -10,30 +10,6 @@ in {
   config = mkIf cfg.enable {
     programs.fish = {
       enable = true;
-      interactiveShellInit = ''
-        fish_vi_key_bindings
-      '';
-      loginShellInit = ''
-        set fish_greeting ""
-        # # Include original PATH components
-        # set PATH $PATH /home/mike/.local/bin /usr/bin /usr/local/bin /usr/local/sbin /home/mike/.local/share/nvim/mason/bin /home/mike/.local/share/nvim/mason/packages/python-lsp-server/venv/bin
-        # # Add pipx binary path
-        # set PATH $PATH $HOME/.local/bin
-
-        # Environment Variables
-        set -x EDITOR nvim
-        set -x VISUAL nvim
-        set -x BROWSER zen-browser
-        set -x TERMINAL kitty
-        set -x SHELL /etc/profiles/per-user/mike/bin/fish
-        set -x HOME /home/mike
-        set -x XDG_CONFIG_HOME $HOME/.config
-        set -x PIPX_HOME $HOME/.local/pipx
-        set -x PIPX_BIN_DIR $HOME/.local/bin
-
-        # # Nix Path
-        # set NIX_PATH /home/mike/dotfiles/nixos/configuration.nix
-      '';
       shellAbbrs = {
         # List Directory Contents
         ls = "eza";
