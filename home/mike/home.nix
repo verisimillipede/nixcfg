@@ -108,7 +108,6 @@
     # streamrip
     neomutt
 
-    starship # The minimal, blazing-fast, and infinitely customizable prompt for any shell
 
     fastfetch
     rsync # A fast, versatile, remote (and local) file-copying tool
