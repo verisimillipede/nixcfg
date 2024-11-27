@@ -10,6 +10,10 @@ in {
   config = mkIf cfg.enable {
     programs.fish = {
       enable = true;
+      loginShellInit = ''
+        set fish_greeting ""
+      '';
+
       shellAbbrs = {
         # List Directory Contents
         ls = "eza";
