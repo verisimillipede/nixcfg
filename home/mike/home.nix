@@ -15,25 +15,25 @@
   ...
 }: {
   home.packages = with pkgs; [
-    obsidian # A powerful knowledge base that works on local Markdown files
-    libreoffice-still # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
+    obsidian
+    libreoffice-still
     spotify
-    thunderbird # A free and open-source email, newsfeed, chat, and calendaring client
-    firefox # A free and open-source web browser
-    plexamp # A music player for Plex Pass users
-    python312 # Python programming language
+    thunderbird
+    firefox
+    plexamp
+    python312
     python312Packages.numpy
     python312Packages.pip
     python3
     nixd
     sl
-    hugo # Static site generator
+    hugo
     pipx
     nodejs
     nodejs_22
-    lua # Lua programming language
+    lua
     luarocks
-    inputs.zen-browser.packages."${system}".specific # Zen Browser
+    inputs.zen-browser.packages."${system}".specific
     go
     poetry
   ];
