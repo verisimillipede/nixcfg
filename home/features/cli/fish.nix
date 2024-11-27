@@ -10,8 +10,13 @@ in {
   config = mkIf cfg.enable {
     programs.fish = {
       enable = true;
-      loginShellInit = ''
-        set fish_greeting ""
+
+      shellInit = ''
+        set -U fish_greeting
+      '';
+
+      interactiveShellInit = ''
+        bind -s -M insert \t accept-autosuggestion
       '';
 
       shellAbbrs = {
