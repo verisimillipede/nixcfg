@@ -36,37 +36,58 @@
     atuin
     bc
     bottom
+    cargo
+    cheat
+    cmake
     comma
+    cowsay
     coreutils
+    curl
     devenv
     direnv
-    doing
     fabric-ai
+    fastfetch
     fd
+    file
+    fzf
     gcc
     go
     htop
     httpie
     jq
     just
+    kitty
     lf
     lazygit
     ncdu
     netcat
+    neomutt
+    neovim
     nix-index
     nix-direnv
     nix-output-monitor
+    nnn
+    nmap
+    nyancat
     plocate
     procs
     progress
+    p7zip
     ripgrep
+    rsync
+    taskwarrior3
+    thefuck
     tldr
     tmux
     trash-cli
+    tree
     unimatrix
     unzip
-    wttrbar
+    which
     wireguard-tools
+    wofi
+    wttrbar
+    xz
     yazi
     zip
   ];

@@ -20,6 +20,7 @@
     obsidian # A powerful knowledge base that works on local Markdown files
     libreoffice-still # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
 
+    spotify
     # Email Clients
     thunderbird # A free and open-source email, newsfeed, chat, and calendaring client
 
@@ -29,51 +30,23 @@
     # Media
     plexamp # A music player for Plex Pass users
 
-    # Formatting Tools
-    cargo
 
     # Utilities
     python312 # Python programming language
     python312Packages.numpy
     python312Packages.pip
     python3
-    neofetch # A command-line system information tool
-    nnn # Terminal file manager
-    thefuck # Correct your commands
-    copyq
-    curl
-    planify
-    cmake
-    ninja
 
-    # Archives
-    zip # Package and compress (archive) files
-    xz # Lossless data compression
-    unzip # Decompression program for .zip files
-    p7zip # Command-line version of 7-Zip
 
-    # Search Utilities
-    fzf # A command-line fuzzy finder
-
-    # Networking Tools
-    nmap # A utility for network discovery and security auditing
 
     # Miscellaneous
     nixd
-    cowsay # Configurable talking cow
     sl
-    nyancat
     file # Determines file type
-    which # Shows the full path of (shell
-    tree # Displays directories as trees (with optional color/HTML output)
 
-    # Nix Related
-    nix-output-monitor # Monitor for nix builds
 
     # Productivity
     hugo # Static site generator
-    file
-    kitty
     pipx
 
     nodejs
@@ -82,29 +55,10 @@
     luarocks
 
     inputs.zen-browser.packages."${system}".specific # Zen Browser
-    marksman
 
-    neovim
     # streamrip
-    neomutt
-
-
-    fastfetch
-    rsync # A fast, versatile, remote (and local) file-copying tool
-    duplicati # Free backup software to store encrypted backups online
-    taskwarrior3 # Taskwarrior is Free and Open Source Software that manages your TODO list from the command line
-    spotify
-    cowsay
-    ponysay
-
-    darktable
-    gimp
     go
     poetry
-    wofi
-
-    cheat
-    tldr
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
