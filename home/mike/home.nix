@@ -12,51 +12,28 @@
   lib,
   pkgs,
   zen-browser,
-  inputs,
   ...
 }: {
   home.packages = with pkgs; [
-    # Note-taking & Office
     obsidian # A powerful knowledge base that works on local Markdown files
     libreoffice-still # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
-
     spotify
-    # Email Clients
     thunderbird # A free and open-source email, newsfeed, chat, and calendaring client
-
-    # Web Browsers
     firefox # A free and open-source web browser
-
-    # Media
     plexamp # A music player for Plex Pass users
-
-
-    # Utilities
     python312 # Python programming language
     python312Packages.numpy
     python312Packages.pip
     python3
-
-
-
-    # Miscellaneous
     nixd
     sl
-    file # Determines file type
-
-
-    # Productivity
     hugo # Static site generator
     pipx
-
     nodejs
     nodejs_22
     lua # Lua programming language
     luarocks
-
-    inputs.zen-browser.packages."${system}".specific # Zen Browser
-
-    # streamrip
+    zen-browser.packages."${system}".specific # Zen Browser
     go
     poetry
   ];
