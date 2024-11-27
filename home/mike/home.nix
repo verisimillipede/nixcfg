@@ -11,7 +11,7 @@
   config,
   lib,
   pkgs,
-  zen-browser,
+  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -33,7 +33,7 @@
     nodejs_22
     lua # Lua programming language
     luarocks
-    zen-browser.packages."${system}".specific # Zen Browser
+    inputs.zen-browser.packages."${system}".specific # Zen Browser
     go
     poetry
   ];
