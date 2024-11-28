@@ -13,6 +13,7 @@ in {
 
       shellInit = ''
         set -U fish_greeting
+        fish_add_path /home/mike/.local/bin
       '';
 
       interactiveShellInit = ''
