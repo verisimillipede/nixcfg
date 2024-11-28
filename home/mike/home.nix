@@ -93,7 +93,7 @@
     MAIL = "$HOME/Mail";
   };
   home.sessionPath = [
-    "$HOME/local/bin"
+    "$HOME/.local/bin"
   ];
 
   programs = {
