@@ -18,6 +18,13 @@ in {
 
       interactiveShellInit = ''
         bind -s -M insert \t accept-autosuggestion
+        set -gx EDITOR nvim
+        set -gx VISUAL nvim
+        set -gx BROWSER zen-browser
+        set -gx TERMINAL kitty
+        set -gx HOME /home/mike
+        set -gx XDG_CONFIG_HOME $HOME/.config
+        set -gx MAIL $HOME/Mail
       '';
 
       shellAbbrs = {
