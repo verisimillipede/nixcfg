@@ -92,6 +92,9 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     MAIL = "$HOME/Mail";
   };
+  home.sessionPath = [
+    "$HOME/local/bin"
+  ];
 
   programs = {
     # Basic configuration of git
