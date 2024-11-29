@@ -84,13 +84,6 @@
   #  /etc/profiles/per-user/m3tam3re/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "nvim";
-    # VISUAL = "nvim";
-    # BROWSER = "zen-browser";
-    # TERMINAL = "kitty";
-    # HOME = "/home/mike";
-    # XDG_CONFIG_HOME = "$HOME/.config";
-    # MAIL = "$HOME/Mail";
   };
 
   programs = {
