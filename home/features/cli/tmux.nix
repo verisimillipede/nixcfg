@@ -1,18 +1,11 @@
 { config, lib, pkgs, ... }:
-
 with lib;
 let
   cfg = config.features.cli.tmux;
-in
-{
-  options.features.cli.tmux.enable = {
+in {
+  options.features.cli.tmux = {
     enable = mkEnableOption "tmux configuration";
   };
-
-  # config = mkIf cfg.enable {
-  #   home.packages = [ pkgs.tmux ];
-  #   xdg.configFile."tmux/tmux.conf".source = ../../../config/.config/tmux/tmux.conf;
-  # };
 
   config = mkIf cfg.enable {
     programs.tmux = {
@@ -42,32 +35,10 @@ in
         set -g display-time 3000
         set -sg history-limit 100000             # increase scrollback
         set -g mouse on                          # enable mouse mode
-
         # source-file ~/.config/tmux/conf/keybindings.conf
-
         # left status is only length of 10
         set -g status-left-length 50
-
       '';
     };
-
-    # xdg.configFile."tmux/scripts" = {
-    #   source = ../../../config/.config/tmux/scripts;
-    #   recursive = true;
-    #   executable = true;
-    # };
-    # xdg.configFile."tmux/conf" = {
-    #   source = ../../../config/.config/tmux/conf;
-    #   recursive = true;
-    #   executable = true;
-    # };
   };
 }
-
-# extra plugins to look at
-# - https://github.com/rothgar/awesome-tmux
-#
-# - https://github.com/wfxr/tmux-fzf-url
-# - https://github.com/roosta/tmux-fuzzback
-# - https://github.com/whame/tmux-modal
-# - https://github.com/evnp/tmex
