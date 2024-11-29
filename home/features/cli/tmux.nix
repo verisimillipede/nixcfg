@@ -2,10 +2,10 @@
 
 with lib;
 let
-  cfg = config.nyx.modules.shell.tmux;
+  cfg = config.features.cli.tmux;
 in
 {
-  options.nyx.modules.shell.tmux = {
+  options.features.cli.tmux.enable = {
     enable = mkEnableOption "tmux configuration";
   };
 

@@ -7,5 +7,6 @@
 
   features.cli = {
     fish.enable = true;
+    tmux.enable = true;
   };
 }
