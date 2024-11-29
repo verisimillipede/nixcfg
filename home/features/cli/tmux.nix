@@ -24,7 +24,7 @@ in {
         nord
         prefix-highlight
         tmux-fzf
-        pkgs.tmux-modal
+        # pkgs.tmux-modal
         vim-tmux-navigator
       ];
       extraConfig = ''
