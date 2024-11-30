@@ -37,6 +37,7 @@
     atuin
     bc
     bottom
+    calcurse
     cargo
     cheat
     cmake
