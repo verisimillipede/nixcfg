@@ -56,6 +56,12 @@ in {
         bind C-l send-keys 'C-l'
 
 
+        # Remove date and time from status bar
+        set -g status-right ""
+
+        # Make status bar background transparent
+        set -g status-style bg=default
+
         # Split windows
         bind | split-window -h
         bind - split-window -v
