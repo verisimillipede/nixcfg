@@ -34,6 +34,7 @@
   home.packages = with pkgs; [
     alacritty
     alejandra
+    appimage-run
     atuin
     bc
     bottom
