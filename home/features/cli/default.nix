@@ -61,6 +61,7 @@
     kitty
     lf
     lazygit
+    nextcloud30
     ncdu
     netcat
     neomutt
