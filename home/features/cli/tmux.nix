@@ -38,7 +38,72 @@ in {
         # source-file ~/.config/tmux/conf/keybindings.conf
         # left status is only length of 10
         set -g status-left-length 50
-      '';
+        # Enter prefix mode easily
+        unbind C-b
+        set -g prefix C-Space
+        bind C-Space send-prefix
+
+        set -g base-index 1 # Start windows and panes at 1
+        set -g pane-base-index 1 # Start panes at 1
+        set -g renumber-windows on # Reorder window numbers when a window is closed
+
+        # Double tap space to switch to last window
+        bind Space last-window
+
+        bind-key -n M-Space next-window
+
+        # Restoring clear screen with prefix + l
+        bind C-l send-keys 'C-l'
+
+
+        # Split windows
+        bind | split-window -h
+        bind - split-window -v
+
+        # Pane resizing
+        bind -n S-Up resize-pane -U 2
+        bind -n S-Down resize-pane -D 2
+        bind -n S-Left resize-pane -L 2
+        bind -n S-Right resize-pane -R 2
+
+
+        # Copy text
+        setw -g mode-keys vi
+        bind -T copy-mode-vi v send -X begin-selection
+        bind -T copy-mode-vi y send -X copy-selection-and-cancel
+
+        # TODO: Do i need this?
+        # Copy to system clipboard
+        bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+
+        # Enlarge pane to display over entire window
+        bind z resize-pane -Z
+
+        # Better pane selection in prefix
+        # bind -n C-/ display-panes
+
+        # Create new window
+        bind c new-window
+
+
+
+        # Refresh 'status-left' and 'status-right' more often, from every 15s to 5s
+        set -g status-interval 5
+
+
+# Emacs key bindings in tmux command prompt (prefix + :) are better than
+# vi keys, even for vim users
+        set -g status-keys emacs
+
+# Unbind escape key from root config
+        unbind-key -T root Escape
+
+# Yazi file manager
+        set -g allow-passthrough all
+        set -ga update-environment TERM
+        set -ga update-environment TERM_PROGRAM
+
+        '';
     };
   };
 }
