@@ -47,6 +47,10 @@
 
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 
   nix = {
     settings = {
