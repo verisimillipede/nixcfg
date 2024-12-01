@@ -9,6 +9,8 @@
     description = "mike";
     extraGroups = [
       "wheel"
+      "plocate"
+      "scanner"
     ];
     packages = [inputs.home-manager.packages.${pkgs.system}.default];
   };

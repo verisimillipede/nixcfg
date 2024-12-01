@@ -42,6 +42,8 @@
   # Pulseaudio
   hardware.pulseaudio.enable = false;
 
+  hardware.sane.enable = true;
+
   # Services
   services = {
     # Keyd
@@ -57,10 +59,6 @@
       };
     };
 
-    sane = {
-      enable = true;
-            extraBackends = [ pkgs.sane-backends ];
-    };
     # Tailscale
     tailscale.enable = true;
 
