@@ -57,6 +57,10 @@
       };
     };
 
+    sane = {
+      enable = true;
+            extraBackends = [ pkgs.sane-backends ];
+    };
     # Tailscale
     tailscale.enable = true;
 
