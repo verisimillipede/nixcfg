@@ -62,6 +62,10 @@
       autoScrub.enable = true;
       autoSnapshot.enable = true;
     };
+    sane = {
+            enable = true;
+            extraBackends = [ pkgs.sane-backends ];
+        };
     # Keyd
     keyd = {
       enable = true;
