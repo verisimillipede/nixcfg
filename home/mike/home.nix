@@ -26,11 +26,13 @@
     python312Packages.pip
     python3
     nixd
+    simple-scan
     sl
     hugo
     pipx
     nodejs
     nodejs_22
+    xsane
     lua
     luarocks
     inputs.zen-browser.packages."${system}".specific
