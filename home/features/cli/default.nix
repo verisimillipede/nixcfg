@@ -52,6 +52,7 @@
     fastfetch
     fd
     file
+    freetube
     fzf
     gcc
     go
