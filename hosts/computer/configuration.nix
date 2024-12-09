@@ -8,20 +8,18 @@
 }: {
   imports = [
     # Include the results of the hardware scan.
+    ./hardware-configuration.nix
     ../common/disko-config.nix
-    ./disko-config.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   boot.supportedFilesystems = ["zfs"];
 
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "9de159a6"; # Define your hostId
-
   networking.hostName = "computer"; # Define your hostname.
 
   # Set your time zone.
@@ -30,22 +28,9 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim
-  ];
 
   # Pulseaudio
   hardware.pulseaudio.enable = false;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mike = {
-    isNormalUser = true;
-    description = "mike";
-    extraGroups = ["networkmanager" "wheel" "plocate"];
-    packages = [inputs.home-manager.packages.${pkgs.system}.default];
-  };
 
 
   # Services

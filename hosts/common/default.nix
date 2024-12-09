@@ -43,6 +43,7 @@
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
+    vim
   ];
 
   users.defaultUserShell = pkgs.fish;

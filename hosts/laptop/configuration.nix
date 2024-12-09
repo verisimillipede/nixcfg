@@ -14,14 +14,12 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "laptop"; # Define your hostname.
+  boot.supportedFilesystems = ["zfs"];
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.hostId = "9de159a6"; # Define your hostId
+  networking.hostName = "laptop"; # Define your hostname.
 
   # Set your time zone.
   time.timeZone = "America/Edmonton";
@@ -33,10 +31,13 @@
   # Pulseaudio
   hardware.pulseaudio.enable = false;
 
-  hardware.sane.enable = true;
-
   # Services
   services = {
+    zfs = {
+      autoScrub.enable = true;
+      autoSnapshot.enable = true;
+    };
+
     # Keyd
     keyd = {
       enable = true;
