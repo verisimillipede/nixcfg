@@ -2,15 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  config,
   inputs,
-  outputs,
   pkgs,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+    ../common/disko-config.nix
     ./disko-config.nix
   ];
 
@@ -49,12 +47,6 @@
     packages = [inputs.home-manager.packages.${pkgs.system}.default];
   };
 
-  home-manager = {
-    useUserPackages = true;
-    extraSpecialArgs = {inherit inputs outputs;};
-    users.mike =
-      import ../../home/mike/${config.networking.hostName}.nix;
-  };
 
   # Services
   services = {
