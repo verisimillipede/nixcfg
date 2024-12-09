@@ -36,7 +36,6 @@
     nixpkgs-stable,
     zen-browser,
     home-manager,
-    disko,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -62,7 +61,10 @@
       };
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/laptop];
+        modules = [
+          ./hosts/laptop
+          inputs.disko.nixosModules.disko
+          ];
       };
     };
 
@@ -72,11 +74,11 @@
         extraSpecialArgs = {inherit self inputs outputs;};
         modules = [./home/mike/computer.nix];
       };
-      "mike@laptop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        extraSpecialArgs = {inherit self inputs outputs;};
-        modules = [./home/mike/laptop.nix];
-      };
+      # "mike@laptop" = home-manager.lib.homeManagerConfiguration {
+      #   pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      #   extraSpecialArgs = {inherit self inputs outputs;};
+      #   modules = [./home/mike/laptop.nix];
+      # };
     };
   };
 }
