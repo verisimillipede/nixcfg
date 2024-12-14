@@ -24,8 +24,10 @@ in {
         set -gx HOME /home/mike
         set -gx XDG_CONFIG_HOME $HOME/.config
         set -gx MAIL $HOME/Mail
-        bind \ce accept-autosuggestion
         set -U fish_key_bindings fish_vi_key_bindings
+        bind -M insert \cp history-search-backward
+        bind -M insert \cn history-search-forward
+        bind \ce accept-autosuggestion
       '';
 
       shellAbbrs = {
