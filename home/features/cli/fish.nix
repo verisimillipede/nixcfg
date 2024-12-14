@@ -16,8 +16,6 @@ in {
         fish_add_path /home/mike/.local/bin
       '';
 
-      # bind \ce accept-autosuggestion
-      # set -U fish_key_bindings fish_vi_key_bindings
       interactiveShellInit = ''
         set -gx EDITOR nvim
         set -gx VISUAL nvim
@@ -26,6 +24,8 @@ in {
         set -gx HOME /home/mike
         set -gx XDG_CONFIG_HOME $HOME/.config
         set -gx MAIL $HOME/Mail
+        bind \ce accept-autosuggestion
+        set -U fish_key_bindings fish_vi_key_bindings
       '';
 
       shellAbbrs = {
