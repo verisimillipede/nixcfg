@@ -33,7 +33,10 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
+    zen-browser,
     home-manager,
+    disko,
     ...
   } @ inputs: let
     inherit (self) outputs;
