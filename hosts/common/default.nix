@@ -45,13 +45,12 @@
     wl-clipboard
     vim
     git
-    nerdfonts
     gnome-extension-manager
     gnome.gnome-shell-extensions
   ];
 
   fonts.packages = with pkgs; [
-    nerdfonts
+    fira
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
