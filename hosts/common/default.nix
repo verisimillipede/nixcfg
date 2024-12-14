@@ -46,7 +46,7 @@
     vim
     git
     gnome-extension-manager
-    gnome.gnome-shell-extensions
+    gnome-shell-extensions
   ];
 
   fonts.packages = with pkgs; [
