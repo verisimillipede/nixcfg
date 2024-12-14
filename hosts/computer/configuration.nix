@@ -2,8 +2,6 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  inputs,
-  pkgs,
   ...
 }: {
   imports = [
@@ -18,8 +16,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostId = "9de159a6"; # Define your hostId
-  networking.hostName = "computer"; # Define your hostname.
+  networking.hostId = "9de159a6";
+  networking.hostName = "computer";
 
   # Set your time zone.
   time.timeZone = "America/Edmonton";
@@ -30,7 +28,6 @@
 
   # Pulseaudio
   hardware.pulseaudio.enable = false;
-
 
   # Services
   services = {
@@ -51,11 +48,6 @@
     };
     # Tailscale
     tailscale.enable = true;
-    # Printing
-    printing = {
-      enable = true;
-      drivers = [pkgs.brlaser];
-    };
     # Avahi
     avahi = {
       enable = true;

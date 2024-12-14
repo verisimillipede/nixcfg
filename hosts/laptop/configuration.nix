@@ -2,7 +2,6 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  pkgs,
   ...
 }: {
   imports = [
@@ -17,8 +16,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostId = "9de159a6"; # Define your hostId
-  networking.hostName = "laptop"; # Define your hostname.
+  networking.hostId = "8425e349";
+  networking.hostName = "laptop";
 
   # Set your time zone.
   time.timeZone = "America/Edmonton";
@@ -36,11 +35,9 @@
       autoScrub.enable = true;
       autoSnapshot.enable = true;
     };
-
     # Keyd
     keyd = {
       enable = true;
-
       # Swap capslock with ctrl + esc
       keyboards.default.settings = {
         main = {
@@ -49,18 +46,14 @@
         };
       };
     };
-
     # Tailscale
     tailscale.enable = true;
-
-
     # Avahi
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
     };
-
     # Pipewire
     pipewire = {
       enable = true;
@@ -69,13 +62,11 @@
         support32Bit = true;
       };
     };
-
     # Xserver
     xserver = {
       enable = true;
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
-
       xkb = {
         layout = "us";
         variant = "";
