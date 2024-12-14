@@ -17,7 +17,7 @@ in {
       '';
 
       interactiveShellInit = ''
-        bind -s -M insert \t accept-autosuggestion
+        bind \ce accept-autosuggestion
         set -gx EDITOR nvim
         set -gx VISUAL nvim
         set -gx BROWSER zen-browser
@@ -25,6 +25,7 @@ in {
         set -gx HOME /home/mike
         set -gx XDG_CONFIG_HOME $HOME/.config
         set -gx MAIL $HOME/Mail
+        set -U fish_key_bindings fish_vi_key_bindings
       '';
 
       shellAbbrs = {
@@ -117,6 +118,10 @@ in {
           expansion = "rip -ndb search tidal album '%'";
           setCursor = true;
         };
+
+        # Software
+        marvin = "appimage-run /opt/marvin/marvin.AppImage";
+
       };
     };
   };
