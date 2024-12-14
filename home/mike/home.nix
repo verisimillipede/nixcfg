@@ -15,6 +15,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    bitwarden
     obsidian
     libreoffice-still
     spotify
