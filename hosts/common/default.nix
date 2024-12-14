@@ -44,6 +44,23 @@
   environment.systemPackages = with pkgs; [
     wl-clipboard
     vim
+    git
+    nerdfonts
+    gnome-extension-manager
+    gnome.gnome-shell-extensions
+  ];
+
+  fonts.packages = with pkgs; [
+    nerdfonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
   ];
 
   users.defaultUserShell = pkgs.fish;
