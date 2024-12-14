@@ -16,8 +16,8 @@ in {
         fish_add_path /home/mike/.local/bin
       '';
 
+      # bind \ce accept-autosuggestion
       interactiveShellInit = ''
-        bind \ce accept-autosuggestion
         set -gx EDITOR nvim
         set -gx VISUAL nvim
         set -gx BROWSER zen-browser
