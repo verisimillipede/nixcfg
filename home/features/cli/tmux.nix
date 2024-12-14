@@ -50,8 +50,15 @@ in {
         # Double tap space to switch to last window
         bind Space last-window
 
+        # Cycle through windows with Alt + Space
         bind-key -n M-Space next-window
 
+        # Go to specific windows with Alt + number
+        bind-key -n M-1 select-window -t 1
+        bind-key -n M-2 select-window -t 2
+        bind-key -n M-3 select-window -t 3
+        bind-key -n M-4 select-window -t 4
+        bind-key -n M-5 select-window -t 5
         # Restoring clear screen with prefix + l
         bind C-l send-keys 'C-l'
 
