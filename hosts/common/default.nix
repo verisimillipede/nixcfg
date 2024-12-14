@@ -65,6 +65,7 @@
     enable = true;
     binfmt = true;
   };
+  programs.command-not-found.enable = false;
 
   nix = {
     settings = {
