@@ -33,8 +33,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-stable,
-    zen-browser,
     home-manager,
     ...
   } @ inputs: let
@@ -74,11 +72,11 @@
         extraSpecialArgs = {inherit self inputs outputs;};
         modules = [./home/mike/computer.nix];
       };
-      # "mike@laptop" = home-manager.lib.homeManagerConfiguration {
-      #   pkgs = nixpkgs.legacyPackages."x86_64-linux";
-      #   extraSpecialArgs = {inherit self inputs outputs;};
-      #   modules = [./home/mike/laptop.nix];
-      # };
+      "mike@laptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit self inputs outputs;};
+        modules = [./home/mike/laptop.nix];
+      };
     };
   };
 }
