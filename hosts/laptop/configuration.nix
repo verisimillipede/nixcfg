@@ -16,9 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  environment.systemPackages = [
-    pkgs.linuxKernel.packages.linux_zen.zfs
-  ];
   boot.zfs = {
       package = pkgs.zfs;
   };
