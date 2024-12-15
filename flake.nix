@@ -69,7 +69,6 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/vintagepc
-          inputs.disko.nixosModules.disko
           ];
       };
     };
