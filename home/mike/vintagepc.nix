@@ -1,7 +1,7 @@
 { pkgs, ...}: {
   imports = [
     ./home.nix
-    # ../features/cli
+    ../features/cli
     ../common
   ];
 
