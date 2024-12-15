@@ -33,8 +33,6 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-stable,
-    zen-browser,
     home-manager,
     disko,
     ...
@@ -64,6 +62,13 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/laptop
+          inputs.disko.nixosModules.disko
+          ];
+      };
+      vintagepc = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/vintagepc
           inputs.disko.nixosModules.disko
           ];
       };

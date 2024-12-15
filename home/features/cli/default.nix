@@ -64,7 +64,6 @@
     lf
     lazygit
     morgen
-    nextcloud30
     ncdu
     netcat
     neomutt
