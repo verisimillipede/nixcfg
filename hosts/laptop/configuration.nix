@@ -17,7 +17,7 @@
   boot.supportedFilesystems = ["zfs"];
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.zfs = {
-      package = pkgs.zfs;
+    package = pkgs.zfs_unstable;
   };
 
   # Enable networking
