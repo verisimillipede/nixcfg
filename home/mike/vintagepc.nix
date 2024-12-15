@@ -28,8 +28,8 @@
     yazi
     zip
   ];
-  # features.cli = {
-  #   fish.enable = true;
-  #   tmux.enable = true;
-  # };
+  features.cli = {
+    fish.enable = true;
+    tmux.enable = true;
+  };
 }
