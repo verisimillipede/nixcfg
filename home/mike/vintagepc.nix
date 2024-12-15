@@ -1,12 +1,12 @@
 {...}: {
   imports = [
     ./home.nix
-    ../features/cli
+    # ../features/cli
     ../common
   ];
 
-  features.cli = {
-    fish.enable = true;
-    tmux.enable = true;
-  };
+  # features.cli = {
+  #   fish.enable = true;
+  #   tmux.enable = true;
+  # };
 }
