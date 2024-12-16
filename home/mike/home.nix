@@ -4,8 +4,6 @@
 # ══ TODO: ═════════════════════════════════════════════════════════════
 #
 # - [x] Modularize packages into separate configuration files
-
-
 {
   config,
   lib,
