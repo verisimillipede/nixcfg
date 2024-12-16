@@ -70,6 +70,7 @@
     neovim
     nix-index
     nix-direnv
+    nix-prefetch-github
     nix-output-monitor
     nnn
     nmap
