@@ -123,7 +123,6 @@ in {
 
         # Software
         marvin = "appimage-run /opt/marvin/marvin.AppImage";
-
       };
     };
   };

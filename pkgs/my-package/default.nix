@@ -1,2 +1,4 @@
-# Your custom nix-package
-# ...
+{...}: {
+  # Your custom nix-package
+  # ...
+}

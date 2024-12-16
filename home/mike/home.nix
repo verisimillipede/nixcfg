@@ -14,32 +14,32 @@
   inputs,
   ...
 }: {
-  # home.packages = with pkgs; [
-  #   bitwarden
-  #   obsidian
-  #   libreoffice-still
-  #   spotify
-  #   thunderbird
-  #   firefox
-  #   plexamp
-  #   python312
-  #   python312Packages.numpy
-  #   python312Packages.pip
-  #   python3
-  #   nixd
-  #   simple-scan
-  #   sl
-  #   hugo
-  #   pipx
-  #   nodejs
-  #   nodejs_22
-  #   xsane
-  #   lua
-  #   luarocks
-  #   inputs.zen-browser.packages."${system}".specific
-  #   go
-  #   poetry
-  # ];
+  home.packages = with pkgs; [
+    bitwarden
+    obsidian
+    libreoffice-still
+    spotify
+    thunderbird
+    firefox
+    plexamp
+    python312
+    python312Packages.numpy
+    python312Packages.pip
+    python3
+    nixd
+    simple-scan
+    sl
+    hugo
+    pipx
+    nodejs
+    nodejs_22
+    xsane
+    lua
+    luarocks
+    inputs.zen-browser.packages."${system}".specific
+    go
+    poetry
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = lib.mkDefault "mike";
