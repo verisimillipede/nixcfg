@@ -39,8 +39,8 @@
         owner = "mohamed-badaoui";
         repo = "asus-touchpad-numpad-driver";
         # These needs to be updated from time to time
-        rev = "d80980af6ef776ee6acf42c193689f207caa7968";
-        sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        rev = "bfbd282025e1aeb2c805a881e01089fe55442e7f";
+        sha256 = "sha256-NkJ2xF4111fXDUPGRUvIVXyyFmJOrlSq0u6jJUJFYes=";
       }}
       # In the last argument here you choose your layout.
       ${pkgs.python3.withPackages (ps: [ps.libevdev])}/bin/python asus_touchpad.py m433ia
