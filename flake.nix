@@ -72,6 +72,13 @@
           ./hosts/vintagepc
         ];
       };
+      server = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/server
+          inputs.disko.nixosModules.disko
+        ];
+      };
     };
 
     homeConfigurations = {
@@ -89,6 +96,11 @@
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit self inputs outputs;};
         modules = [./home/mike/vintagepc.nix];
+      };
+      "mike@server" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit self inputs outputs;};
+        modules = [./home/mike/server.nix];
       };
     };
   };
