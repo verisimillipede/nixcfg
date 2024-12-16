@@ -29,6 +29,7 @@
     simple-scan
     sl
     hugo
+    openssl
     pipx
     nodejs
     nodejs_22
