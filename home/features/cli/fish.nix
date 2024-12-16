@@ -70,6 +70,7 @@ in {
         gd = "git diff";
         gpa = "git push codeberg main && git push github main";
         lg = "lazygit";
+        gr = "bash ~/.bash-scripts/git-remote-setup.sh";
 
         # Neovim/Editor Commands
         nv = "nvim .";
