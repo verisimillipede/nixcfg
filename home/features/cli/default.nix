@@ -63,7 +63,7 @@
     kitty
     lf
     lazygit
-    morgen
+    mapscii
     ncdu
     netcat
     neomutt
