@@ -32,6 +32,7 @@
   };
 
   home.packages = with pkgs; [
+    asciiquarium
     alacritty
     alejandra
     appimage-run
