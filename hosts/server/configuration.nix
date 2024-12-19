@@ -12,6 +12,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  # boot.zfs = {
+  #   package = pkgs.zfs_unstable;
+  # };
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -28,49 +32,48 @@
   hardware.pulseaudio.enable = false;
 
   # Services
-  services = {
-    zfs = {
-      autoScrub.enable = true;
-      autoSnapshot.enable = true;
-    };
-    # Keyd
-    keyd = {
-      enable = true;
-      # Swap capslock with ctrl + esc
-      keyboards.default.settings = {
-        main = {
-          capslock = "overload(control, esc)";
-          esc = "capslock";
-        };
-      };
-    };
-    # Tailscale
-    tailscale.enable = true;
-    # Avahi
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
-    # Pipewire
-    pipewire = {
-      enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-    };
-    # Xserver
-    xserver = {
-      enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-      xkb = {
-        layout = "us";
-        variant = "";
+  services.zfs = {
+    autoScrub.enable = true;
+    autoSnapshot.enable = true;
+  };
+
+  services.keyd = {
+    enable = true;
+    # Swap capslock with ctrl + esc
+    keyboards.default.settings = {
+      main = {
+        capslock = "overload(control, esc)";
+        esc = "capslock";
       };
     };
   };
+
+  services.tailscale.enable = true;
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.pipewire = {
+    enable = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+  };
+
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
