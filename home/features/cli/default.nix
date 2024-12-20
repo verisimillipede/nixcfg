@@ -64,6 +64,7 @@
     kitty
     lf
     lazygit
+    libxfs
     mapscii
     ncdu
     netcat
