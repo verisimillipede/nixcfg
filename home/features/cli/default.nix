@@ -48,6 +48,7 @@
     coreutils
     curl
     devenv
+    docker-compose
     direnv
     fabric-ai
     fastfetch
