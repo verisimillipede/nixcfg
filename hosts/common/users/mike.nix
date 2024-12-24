@@ -10,7 +10,7 @@
     extraGroups = [
       "wheel"
       "plocate"
-      "scanner"
+      "docker"
     ];
     packages = [inputs.home-manager.packages.${pkgs.system}.default];
   };

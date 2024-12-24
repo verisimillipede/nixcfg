@@ -31,6 +31,7 @@
   # Pulseaudio
   hardware.pulseaudio.enable = false;
 
+  virtualisation.docker.enable = true;
   # Services
   services.zfs = {
     autoScrub.enable = true;
