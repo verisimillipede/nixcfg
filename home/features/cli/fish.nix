@@ -41,11 +41,14 @@ in {
         cat = "bat";
         cp = "cp -v";
         mv = "mv -v";
-        rm = "rm {}";
         mkdir = "mkdir -pv";
         grep = "rg";
         ps = "procs";
         fs = "du -ah . | sort -hr | head -n 10";
+
+        # Bash Scripts
+        sa = "bash ~/.bash-scripts/sort-artists";
+        ghr = "bash ~/.bash-scripts/git-remote-setup.sh";
 
         # System Commands
         locate = "sudo plocate";
