@@ -61,6 +61,7 @@
     go
     htop
     httpie
+    apacheHttpd
     jq
     just
     kitty
