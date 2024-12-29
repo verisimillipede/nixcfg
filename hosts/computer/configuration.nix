@@ -4,6 +4,7 @@
 {...}: {
   imports = [
     # Include the results of the hardware scan.
+    ../common/disko-config.nix
     ./hardware-configuration.nix
   ];
 
