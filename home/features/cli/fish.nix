@@ -55,8 +55,17 @@ in {
         ping = "ping -c 5";
 
         # Nix Commands
-        nr = "sudo nixos-rebuild switch --flake .#zenbook";
-        hm = "home-manager switch --flake .#mike@zenbook";
+        nr = {
+            expansion = "sudo nixos-rebuild switch --flake .#%";
+            setCursor = true;
+            };
+        hm = {
+            expansion = "home-manager switch --flake .#mike@%";
+            setCursor = true;
+            };
+        nc = {
+            expansion = "cd ~/nixcfg; and nvim .";
+            };
         ni = "nix-instantiate --eval --strict";
 
         # Quick Access
