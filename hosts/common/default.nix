@@ -65,11 +65,71 @@
   };
   programs.command-not-found.enable = false;
 
-  services.syncthing = {
-    enable = true;
-    openDefaultPorts = true;
-    user = "mike";
-  };
+    services.syncthing = {
+      enable = true;
+      user = "mike";
+      dataDir = "/home/mike";
+      configDir = "/home/mike/.config/syncthing";
+      overrideDevices = true;
+      overrideFolders = true;
+      settings = {
+        devices = {
+          "server" = {
+            id = "BP6PSJT-HNYSW2J-XQL7MLJ-NEWAYUD-YE36UIJ-ZJFYSVD-AKJIRRV-KVZ7PAR";
+            addresses = ["tcp://server.turkey-mimosa.ts.net"];
+          };
+          "computer" = {
+            id = "CKCXMHO-GYPVZM3-7EO4YKM-Z2L6RY6-Y262EUO-Z5KYWQM-S3VGDBD-PVIETQQ";
+            addresses = ["tcp://computer.turkey-mimosa.ts.net"];
+          };
+          "laptop" = {
+            id = "QB2KDVA-FQUUNVM-O3DJDIK-BR4ZX6X-K6QJICC-F5YNQNW-NN3NDEA-M2BVIQQ";
+            addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
+          };
+        };
+        folders = {
+          "Documents" = {
+            path = "~/Documents";
+            devices = ["server" "computer" "laptop"];
+          };
+          "Downloads" = {
+            path = "/home/mike/Downloads";
+            devices = ["server" "computer" "laptop"];
+          };
+          "Pictures" = {
+            path = "~/Pictures";
+            devices = ["server" "computer" "laptop"];
+          };
+          "default" = {
+            path = "/home/mike/Sync";
+            devices = ["server" "computer" "laptop"];
+          };
+          "undodir" = {
+            path = "~/.vim/undodir";
+            devices = ["server" "computer" "laptop"];
+          };
+        };
+        options = {
+          globalAnnounceEnabled = true;
+          localAnnounceEnabled = true;
+          localAnnouncePort = 21027;
+          relaysEnabled = true;
+          natEnabled = true;
+          urAccepted = 3;
+          urSeen = 3;
+          urUniqueID = "GLsFQaxC";
+          crashReportingEnabled = true;
+          setLowPriority = true;
+        };
+        gui = {
+          enabled = true;
+          address = "100.77.194.40:8384";
+          user = "mike";
+          password = "$2y$10$8ZlCK0LtEAkeHVm3LxcAweLOJ9h2.B9HvULsPTqIC5YUkEwMuYwSq";
+          apiKey = "ac7rxJRAiFTDY9HqpGevAgSH4SGMDP9u";
+        };
+      };
+    };
 
   nix = {
     settings = {
