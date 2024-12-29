@@ -131,6 +131,7 @@
       };
     };
 
+  systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
     settings = {
       experimental-features = "nix-command flakes";
