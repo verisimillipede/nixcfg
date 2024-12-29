@@ -83,7 +83,7 @@
             addresses = ["tcp://computer.turkey-mimosa.ts.net"];
           };
           "laptop" = {
-            id = "QB2KDVA-FQUUNVM-O3DJDIK-BR4ZX6X-K6QJICC-F5YNQNW-NN3NDEA-M2BVIQQ";
+            id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
             addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
           };
         };
