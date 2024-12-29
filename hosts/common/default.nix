@@ -45,8 +45,6 @@
     wl-clipboard
     vim
     git
-    gnome-extension-manager
-    gnome-shell-extensions
   ];
 
   fonts.packages = with pkgs; [
