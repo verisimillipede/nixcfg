@@ -47,7 +47,7 @@ in {
         fs = "du -ah . | sort -hr | head -n 10";
 
         # Bash Scripts
-        sa = "bash ~/.bash-scripts/sort-artists";
+        sa = "bash ~/.bash-scripts/sort-artists.sh";
         ghr = "bash ~/.bash-scripts/git-remote-setup.sh";
 
         # System Commands
