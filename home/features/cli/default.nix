@@ -85,6 +85,7 @@
     p7zip
     ripgrep
     rsync
+    syncthing
     taskwarrior3
     thefuck
     tldr
