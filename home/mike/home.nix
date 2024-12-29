@@ -31,7 +31,6 @@
     pipx
     nodejs
     nodejs_22
-    xsane
     lua
     luarocks
     inputs.zen-browser.packages."${system}".specific
