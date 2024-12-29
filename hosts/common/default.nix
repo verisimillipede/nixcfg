@@ -79,7 +79,7 @@
             addresses = ["tcp://server.turkey-mimosa.ts.net"];
           };
           "computer" = {
-            id = "CKCXMHO-GYPVZM3-7EO4YKM-Z2L6RY6-Y262EUO-Z5KYWQM-S3VGDBD-PVIETQQ";
+            id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
             addresses = ["tcp://computer.turkey-mimosa.ts.net"];
           };
           "laptop" = {
