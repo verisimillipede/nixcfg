@@ -59,10 +59,7 @@ in {
             expansion = "sudo nixos-rebuild switch --flake .#%";
             setCursor = true;
             };
-        hm = {
-            expansion = "home-manager switch --flake .#mike@%";
-            setCursor = true;
-            };
+        hm = "home-manager switch --flake .#mike@$hostname";
         nc = {
             expansion = "cd ~/nixcfg; and nvim .";
             };
