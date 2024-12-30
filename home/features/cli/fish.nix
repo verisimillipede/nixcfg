@@ -55,14 +55,9 @@ in {
         ping = "ping -c 5";
 
         # Nix Commands
-        nr = {
-            expansion = "sudo nixos-rebuild switch --flake .#%";
-            setCursor = true;
-            };
+        nr = "sudo nixos-rebuild switch --flake .#$hostname";
         hm = "home-manager switch --flake .#mike@$hostname";
-        nc = {
-            expansion = "cd ~/nixcfg; and nvim .";
-            };
+        nc = "cd ~/nixcfg; and nvim .";
         ni = "nix-instantiate --eval --strict";
 
         # Quick Access
@@ -88,19 +83,11 @@ in {
         vi = "nvim";
         vim = "nvim";
 
-        # SSH
-        prawn = "ssh prawn@chappie";
-        zilla = "ssh zilla@mothra";
-        toad = "ssh toad@archlinux";
 
         # Python & Virtual Environments
         p = "python";
         pm = "python main.py";
-        d = "deactivate";
-        ev = "source (poetry env info --path)/bin/activate.fish";
 
-        # Project Directories
-        zz = "cd ~/Projects/Zealot; nix-shell --run 'cd ~/Projects/Zealot/Zealot; exec fish'";
 
         # Directory Navigation
         "-" = "cd ..";
@@ -133,6 +120,7 @@ in {
 
         # Software
         marvin = "appimage-run /opt/marvin/marvin.AppImage";
+        zb = "appimage-run /opt/zen-browser/zen-x86_64.AppImage";
       };
     };
   };
