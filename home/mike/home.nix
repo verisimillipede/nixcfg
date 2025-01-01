@@ -33,7 +33,7 @@
     nodejs_22
     lua
     luarocks
-    inputs.zen-browser.packages."${system}".specific
+    inputs.zen-browser.packages."${system}".default
     go
     poetry
   ];
