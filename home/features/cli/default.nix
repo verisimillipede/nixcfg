@@ -101,6 +101,7 @@
     wttrbar
     xz
     yazi
+    yt-dlp
     zip
   ];
 }
