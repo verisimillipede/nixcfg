@@ -24,7 +24,6 @@
     python312Packages.pip
     python3
     nixd
-    simple-scan
     sl
     hugo
     openssl
@@ -35,6 +34,7 @@
     luarocks
     inputs.zen-browser.packages."${system}".default
     go
+    vlc
     poetry
   ];
   # Home Manager needs a bit of information about you and the paths it should
