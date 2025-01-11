@@ -57,7 +57,9 @@ in {
         # Nix Commands
         nr = "sudo nixos-rebuild switch --flake .#$hostname";
         hm = "home-manager switch --flake .#mike@$hostname";
-        nu = "sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
+        nu = "nix flake update";
+        r = "nix flake update; and sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
+        nrhm = "sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
         nc = "cd ~/nixcfg; and nvim .";
         ni = "nix-instantiate --eval --strict";
 
