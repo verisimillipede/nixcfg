@@ -70,6 +70,7 @@
     lazygit
     libxfs
     mapscii
+    mpv
     ncdu
     netcat
     neomutt
