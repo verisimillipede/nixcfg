@@ -1,0 +1,1 @@
+All credit goes to Sasha Koenig on YouTube. His comprehensive nix tutorials have been incredibly helpful in furthering my understanding of Nix and Home-Manager configuration. These dot files are heavily influenced by him and his expertise.
