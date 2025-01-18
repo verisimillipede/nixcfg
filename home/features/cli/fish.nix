@@ -86,6 +86,8 @@ in {
         vi = "nvim";
         vim = "nvim";
 
+        # Obsidian
+        zk = "cd ~/Documents/Zettlekasten/; and nvim .";
 
         # Python & Virtual Environments
         p = "python";
