@@ -30,6 +30,7 @@
     pipx
     nodejs
     nodejs_22
+    lagrange
     lua
     luarocks
     inputs.zen-browser.packages."${system}".default
