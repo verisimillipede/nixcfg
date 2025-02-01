@@ -75,7 +75,7 @@
       settings = {
         devices = {
           "server" = {
-            id = "BP6PSJT-HNYSW2J-XQL7MLJ-NEWAYUD-YE36UIJ-ZJFYSVD-AKJIRRV-KVZ7PAR";
+            id = "TSIUADB-CQWWY02-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
             addresses = ["tcp://server.turkey-mimosa.ts.net"];
           };
           "computer" = {
