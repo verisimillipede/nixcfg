@@ -37,7 +37,7 @@
     alejandra
     appimage-run
     atuin
-    bambu-studio
+    # bambu-studio
     bc
     bottom
     calcurse
