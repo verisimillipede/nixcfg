@@ -48,6 +48,7 @@
     cowsay
     coreutils
     curl
+    cups
     devenv
     docker
     docker-compose
@@ -97,6 +98,7 @@
     tree
     unimatrix
     unzip
+    wget
     which
     wireguard-tools
     wofi
