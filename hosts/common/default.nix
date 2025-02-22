@@ -130,7 +130,14 @@
         };
       };
     };
-
+  services.printing = {
+    enable = true;
+    listenAddresses = [ "*:631" ];
+    allowFrom = [ "all" ];
+    browsing = true;
+    defaultShared = true;
+    openFirewall = true;
+  };
   systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
     settings = {
