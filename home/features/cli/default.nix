@@ -70,7 +70,6 @@
     lf
     lazygit
     libxfs
-    mapscii
     mpv
     ncdu
     netcat
