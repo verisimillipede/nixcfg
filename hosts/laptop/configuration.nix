@@ -13,9 +13,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  boot.zfs = {
-    package = pkgs.zfs_unstable;
-  };
+  # boot.zfs = {
+  #   package = pkgs.zfs_unstable;
+  # };
 
   # Enable networking
   networking.networkmanager.enable = true;
