@@ -32,6 +32,7 @@
   };
 
   home.packages = with pkgs; [
+    aider-chat
     asciiquarium
     alacritty
     alejandra
