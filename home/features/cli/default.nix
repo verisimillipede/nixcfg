@@ -69,6 +69,7 @@
     kitty
     lf
     lazygit
+    lua-language-server
     libxfs
     mpv
     ncdu
