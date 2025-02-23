@@ -85,6 +85,9 @@ in {
         nxv = "nix run ~/dotfiles/nixvim";
         vi = "nvim";
         vim = "nvim";
+	lv = "NVIM_APPNAME="lazyvim" nvim'
+	ks = 'NVIM_APPNAME="kickstart" nvim'
+	ch = 'NVIM_APPNAME="nvchad" nvim'
 
         # Obsidian
         zk = "cd ~/Documents/Zettlekasten/; and nvim .";
