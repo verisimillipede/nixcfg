@@ -32,12 +32,13 @@
   };
 
   home.packages = with pkgs; [
+    aider-chat
     asciiquarium
     alacritty
     alejandra
     appimage-run
     atuin
-    bambu-studio
+    # bambu-studio
     bc
     bottom
     calcurse
@@ -48,6 +49,7 @@
     cowsay
     coreutils
     curl
+    cups
     devenv
     docker
     docker-compose
@@ -68,8 +70,8 @@
     kitty
     lf
     lazygit
+    lua-language-server
     libxfs
-    mapscii
     mpv
     ncdu
     netcat
@@ -97,6 +99,7 @@
     tree
     unimatrix
     unzip
+    wget
     which
     wireguard-tools
     wofi

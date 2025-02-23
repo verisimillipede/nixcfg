@@ -80,11 +80,14 @@ in {
         gr = "bash ~/.bash-scripts/git-remote-setup.sh";
 
         # Neovim/Editor Commands
-        nv = "nvim .";
+        # nv = "nvim .";
         ns = "nvim -S Session.vim";
         nxv = "nix run ~/dotfiles/nixvim";
         vi = "nvim";
         vim = "nvim";
+        lv = "NVIM_APPNAME='lazyvim' nvim";
+        ks = "NVIM_APPNAME='kickstart' nvim";
+        nv = "NVIM_APPNAME='nvchad' nvim .";
 
         # Obsidian
         zk = "cd ~/Documents/Zettlekasten/; and nvim .";
