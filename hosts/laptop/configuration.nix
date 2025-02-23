@@ -12,7 +12,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen.zfs_unstable;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.zfs = {
     package = pkgs.zfs_unstable;
   };
