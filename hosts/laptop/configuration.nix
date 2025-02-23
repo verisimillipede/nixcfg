@@ -12,9 +12,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen.zfs_unstable;
   boot.zfs = {
-    package = pkgs.linuxKernel.packages.linux_zen.zfs_unstable;
+    package = pkgs.zfs_unstable;
   };
 
   # Enable networking
