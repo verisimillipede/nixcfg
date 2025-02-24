@@ -60,6 +60,7 @@
     fastfetch
     fd
     file
+    fish-lsp
     freetube
     fzf
     gcc
