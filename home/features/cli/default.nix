@@ -39,6 +39,7 @@
     appimage-run
     atuin
     # bambu-studio
+    basedpyright
     bc
     black
     bottom
