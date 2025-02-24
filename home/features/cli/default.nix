@@ -40,6 +40,7 @@
     atuin
     # bambu-studio
     bc
+    black
     bottom
     calcurse
     cargo
