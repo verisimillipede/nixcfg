@@ -56,6 +56,7 @@
     docker
     docker-compose
     direnv
+    esphome
     fabric-ai
     fastfetch
     fd
