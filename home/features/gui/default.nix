@@ -1,4 +1,4 @@
-{ pkgs, inputs, system, ... }: {
+{ pkgs, inputs, config, lib, ... }: {
   home.packages = with pkgs; [
     # Browsers and Communication
     firefox
