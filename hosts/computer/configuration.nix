@@ -24,8 +24,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Pulseaudio
-  hardware.pulseaudio.enable = false;
 
   # Services
   services = {
@@ -60,6 +58,8 @@
         support32Bit = true;
       };
     };
+    # Pulseaudio
+    pulseaudio.enable = false;
     # Xserver
     xserver = {
       enable = true;

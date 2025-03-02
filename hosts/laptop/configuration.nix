@@ -53,9 +53,6 @@
   #   wantedBy = ["multi-user.target"];
   # };
 
-  # Pulseaudio
-  hardware.pulseaudio.enable = false;
-
   # Services
   services.zfs = {
     autoScrub.enable = true;
@@ -72,6 +69,8 @@
       };
     };
   };
+  # Pulseaudio
+  services.pulseaudio.enable = false;
 
   services.tailscale.enable = true;
 
