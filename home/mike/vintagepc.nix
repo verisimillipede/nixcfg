@@ -2,6 +2,7 @@
   imports = [
     ./home.nix
     ../features/cli
+    ../features/gui
     ../common
   ];
 

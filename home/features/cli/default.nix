@@ -30,87 +30,203 @@
       enableFishIntegration = true;
     };
   };
-
   home.packages = with pkgs; [
-    aider-chat
-    asciiquarium
-    alacritty
+    # Development Tools
     alejandra
-    appimage-run
-    atuin
-    # bambu-studio
     basedpyright
-    bc
     black
-    bottom
-    calcurse
     cargo
-    cheat
     cmake
-    comma
-    cowsay
-    coreutils
-    curl
-    cups
     devenv
-    docker
-    docker-compose
-    direnv
-    esphome
-    fabric-ai
-    fastfetch
-    fd
-    file
     fish-lsp
-    freetube
-    fzf
     gcc
     go
-    htop
-    httpie
-    apacheHttpd
-    jq
-    just
-    kitty
-    lf
-    lazygit
+    lua
     lua-language-server
-    libxfs
-    mpv
-    ncdu
-    netcat
-    neomutt
     neovim
     nix-index
     nix-direnv
     nix-prefetch-github
     nix-output-monitor
-    nnn
-    nmap
-    nyancat
+    nodejs
+    nodejs_22
+    poetry
+    python312
+    python312Packages.numpy
+    python312Packages.pip
+    python3
+    pipx
+
+    # System Utilities
+    appimage-run
+    bottom
+    coreutils
+    docker
+    docker-compose
+    fd
+    file
+    fzf
+    htop
+    jq
+    ncdu
     plocate
     procs
     progress
-    p7zip
     ripgrep
     rsync
-    syncthing
-    taskwarrior3
-    thefuck
-    tldr
-    tmux
     trash-cli
     tree
-    unimatrix
     unzip
     wget
     which
-    wireguard-tools
-    wofi
-    wttrbar
     xz
-    yazi
-    yt-dlp
     zip
+    p7zip
+
+    # Network Tools
+    curl
+    httpie
+    nmap
+    wireguard-tools
+
+    # File Management
+    lf
+    nnn
+    yazi
+
+    # Version Control
+    lazygit
+
+    # CLI Applications
+    aider-chat
+    calcurse
+    neomutt
+    taskwarrior3
+    yt-dlp
+
+    # System Monitoring
+    fastfetch
+    wttrbar
+
+    # Fun CLI Tools
+    asciiquarium
+    cowsay
+    nyancat
+    sl
+    unimatrix
+
+    # Additional Tools
+    atuin
+    cheat
+    comma
+    direnv
+    just
+    thefuck
+    tldr
   ];
-}
+
+#   home.packages = with pkgs; [
+#     aider-chat
+#     asciiquarium
+#     alacritty
+#     alejandra
+#     appimage-run
+#     atuin
+#     # bambu-studio
+#     basedpyright
+#     black
+#     cargo
+#     cmake
+#     devenv
+#     fish-lsp
+#     gcc
+#     go
+#     lua
+#     lua-language-server
+#     neovim
+#     nix-index
+#     nix-direnv
+#     nix-prefetch-github
+#     nix-output-monitor
+#     nodejs
+#     nodejs_22
+#     poetry
+#     python312
+#     python312Packages.numpy
+#     python312Packages.pip
+#     python3
+#     pipx
+#
+#     # System Utilities
+#     appimage-run
+#     bottom
+#     coreutils
+#     docker
+#     docker-compose
+#     fd
+#     file
+#     fzf
+#     htop
+#     jq
+#     ncdu
+#     plocate
+#     procs
+#     progress
+#
+#     ripgrep
+#     rsync
+#
+#     trash-cli
+#     tree
+#
+#     unzip
+#     wget
+#     which
+#
+#     xz
+#
+#     zip
+#     p7zip
+#
+#     # Network Tools
+#     curl
+#     httpie
+#     nmap
+#     wireguard-tools
+#
+#     # File Management
+#     lf
+#     nnn
+#     yazi
+#
+#     # Version Control
+#     lazygit
+#
+#     # CLI Applications
+#     aider-chat
+#     calcurse
+#     neomutt
+#     taskwarrior3
+#     yt-dlp
+#
+#     # System Monitoring
+#     fastfetch
+#     wttrbar
+#
+#     # Fun CLI Tools
+#     asciiquarium
+#     cowsay
+#     nyancat
+#     sl
+#     unimatrix
+#
+#     # Additional Tools
+#     atuin
+#     cheat
+#     comma
+#     direnv
+#     just
+#     thefuck
+#     tldr
+#   ];
+# }
