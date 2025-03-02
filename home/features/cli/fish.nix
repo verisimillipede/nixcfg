@@ -90,7 +90,7 @@ in {
         nv = "NVIM_APPNAME='nvchad' nvim .";
 
         # Obsidian
-        zk = "cd ~/Documents/Zettlekasten/; and nvim .";
+        zk = "cd ~/Documents/Zettlekasten/; and NVIM_APPNAME='nvchad' nvim .";
 
         # Python & Virtual Environments
         p = "python";
