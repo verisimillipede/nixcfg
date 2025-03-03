@@ -11,6 +11,7 @@
     mpv
     plexamp
     spotify
+    calibre
 
     # Productivity and Office
     bitwarden
