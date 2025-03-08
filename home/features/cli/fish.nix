@@ -37,6 +37,12 @@ in {
         la = "eza -a";
         lt = "eza --tree --level=2 --long --icons --git";
 
+        # Change Directory and List Contents
+        cd = {
+          expansion = "cd %; and eza";
+          setCursor = true;
+        };
+
         # File Operations
         cat = "bat";
         cp = "cp -v";
@@ -95,6 +101,10 @@ in {
         # Python & Virtual Environments
         p = "python";
         pm = "python main.py";
+
+        # Remove and Trash
+
+        rm = "trash";
 
 
         # Directory Navigation
