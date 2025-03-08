@@ -66,7 +66,7 @@ in {
         nu = "nix flake update";
         r = "nix flake update; and sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
         nrhm = "sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
-        nc = "cd ~/nixcfg; and nvim .";
+        nc = "cd ~/nixcfg; and NVIM_APPNAME='nvchad' nvim .";
         ni = "nix-instantiate --eval --strict";
 
         # Quick Access
