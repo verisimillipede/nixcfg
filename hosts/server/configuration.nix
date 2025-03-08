@@ -28,7 +28,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-
   virtualisation.docker.enable = true;
   # Services
   services.zfs = {

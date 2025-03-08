@@ -65,75 +65,75 @@
   };
   programs.command-not-found.enable = false;
 
-    services.syncthing = {
-      enable = true;
-      user = "mike";
-      dataDir = "/home/mike";
-      configDir = "/home/mike/.config/syncthing";
-      overrideDevices = true;
-      overrideFolders = true;
-      settings = {
-        devices = {
-          "server" = {
-            id = "TSIUADB-CQWWY02-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
-            addresses = ["tcp://server.turkey-mimosa.ts.net"];
-          };
-          "computer" = {
-            id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
-            addresses = ["tcp://computer.turkey-mimosa.ts.net"];
-          };
-          "laptop" = {
-            id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
-            addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
-          };
+  services.syncthing = {
+    enable = true;
+    user = "mike";
+    dataDir = "/home/mike";
+    configDir = "/home/mike/.config/syncthing";
+    overrideDevices = true;
+    overrideFolders = true;
+    settings = {
+      devices = {
+        "server" = {
+          id = "TSIUADB-CQWWY02-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
+          addresses = ["tcp://server.turkey-mimosa.ts.net"];
         };
-        folders = {
-          "Documents" = {
-            path = "~/Documents";
-            devices = ["server" "computer" "laptop"];
-          };
-          "Downloads" = {
-            path = "/home/mike/Downloads";
-            devices = ["server" "computer" "laptop"];
-          };
-          "Pictures" = {
-            path = "~/Pictures";
-            devices = ["server" "computer" "laptop"];
-          };
-          "default" = {
-            path = "/home/mike/Sync";
-            devices = ["server" "computer" "laptop"];
-          };
-          "undodir" = {
-            path = "~/.vim/undodir";
-            devices = ["server" "computer" "laptop"];
-          };
+        "computer" = {
+          id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
+          addresses = ["tcp://computer.turkey-mimosa.ts.net"];
         };
-        options = {
-          globalAnnounceEnabled = true;
-          localAnnounceEnabled = true;
-          localAnnouncePort = 21027;
-          relaysEnabled = true;
-          natEnabled = true;
-          urAccepted = 3;
-          urSeen = 3;
-          urUniqueID = "GLsFQaxC";
-          crashReportingEnabled = true;
-          setLowPriority = true;
-        };
-        gui = {
-          enabled = true;
-          address = "100.77.194.40:8384";
-          user = "mike";
-          password = "$2y$10$8ZlCK0LtEAkeHVm3LxcAweLOJ9h2.B9HvULsPTqIC5YUkEwMuYwSq";
-          apiKey = "ac7rxJRAiFTDY9HqpGevAgSH4SGMDP9u";
+        "laptop" = {
+          id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
+          addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
         };
       };
+      folders = {
+        "Documents" = {
+          path = "~/Documents";
+          devices = ["server" "computer" "laptop"];
+        };
+        "Downloads" = {
+          path = "/home/mike/Downloads";
+          devices = ["server" "computer" "laptop"];
+        };
+        "Pictures" = {
+          path = "~/Pictures";
+          devices = ["server" "computer" "laptop"];
+        };
+        "default" = {
+          path = "/home/mike/Sync";
+          devices = ["server" "computer" "laptop"];
+        };
+        "undodir" = {
+          path = "~/.vim/undodir";
+          devices = ["server" "computer" "laptop"];
+        };
+      };
+      options = {
+        globalAnnounceEnabled = true;
+        localAnnounceEnabled = true;
+        localAnnouncePort = 21027;
+        relaysEnabled = true;
+        natEnabled = true;
+        urAccepted = 3;
+        urSeen = 3;
+        urUniqueID = "GLsFQaxC";
+        crashReportingEnabled = true;
+        setLowPriority = true;
+      };
+      gui = {
+        enabled = true;
+        address = "100.77.194.40:8384";
+        user = "mike";
+        password = "$2y$10$8ZlCK0LtEAkeHVm3LxcAweLOJ9h2.B9HvULsPTqIC5YUkEwMuYwSq";
+        apiKey = "ac7rxJRAiFTDY9HqpGevAgSH4SGMDP9u";
+      };
     };
+  };
   services.printing = {
     enable = true;
-    listenAddresses = [ "*:631" ];
-    allowFrom = [ "all" ];
+    listenAddresses = ["*:631"];
+    allowFrom = ["all"];
     browsing = true;
     defaultShared = true;
     openFirewall = true;

@@ -21,7 +21,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-
   # Services
   services = {
     # Keyd

@@ -101,11 +101,10 @@ in {
         # Python & Virtual Environments
         p = "python";
         pm = "python main.py";
+        dj = "python manage.py runserver"
 
         # Remove and Trash
-
         rm = "trash";
-
 
         # Directory Navigation
         "-" = "cd ..";
