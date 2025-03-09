@@ -17,6 +17,7 @@
     mpv
     plexamp
     spotify
+    readarr
     calibre
 
     # Productivity and Office
