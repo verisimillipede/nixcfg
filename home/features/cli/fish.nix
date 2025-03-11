@@ -101,6 +101,7 @@ in {
         p = "python";
         pm = "python main.py";
         dj = "python manage.py runserver";
+        ds = "z devsearch; and nvim .";
 
         # Remove and Trash
         rm = "trash";
