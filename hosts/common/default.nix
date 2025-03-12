@@ -130,14 +130,27 @@
       };
     };
   };
-  services.printing = {
+
+  # Printing
+  printing = {
     enable = true;
-    listenAddresses = ["*:631"];
-    allowFrom = ["all"];
-    browsing = true;
-    defaultShared = true;
-    openFirewall = true;
+    drivers = [pkgs.brlaser];
   };
+
+  # # Avahi
+  # avahi = {
+  #   enable = true;
+  #   nssmdns4 = true;
+  #   openFirewall = true;
+  # };
+  # services.printing = {
+  #   enable = true;
+  #   listenAddresses = ["127.0.0.1:631"];
+  #   allowFrom = ["all"];
+  #   browsing = true;
+  #   defaultShared = true;
+  #   openFirewall = true;
+  # };
   systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
     settings = {
