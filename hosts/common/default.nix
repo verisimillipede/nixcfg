@@ -89,7 +89,7 @@
       };
       folders = {
         "Documents" = {
-          path = "~/Documents";
+          path = "/home/mike/Documents";
           devices = ["server" "computer" "laptop"];
         };
         "Downloads" = {
@@ -97,11 +97,11 @@
           devices = ["server" "computer" "laptop"];
         };
         "Pictures" = {
-          path = "~/Pictures";
+          path = "/home/mike/Pictures";
           devices = ["server" "computer" "laptop"];
         };
         "Library" = {
-          path = "~/Library";
+          path = "/home/mike/Library";
           devices = ["server" "computer" "laptop"];
         };
         "default" = {
@@ -109,7 +109,7 @@
           devices = ["server" "computer" "laptop"];
         };
         "undodir" = {
-          path = "~/.vim/undodir";
+          path = "/home/mike/.vim/undodir";
           devices = ["server" "computer" "laptop"];
         };
       };
@@ -127,7 +127,7 @@
       };
       gui = {
         enabled = true;
-        address = "100.77.194.40:8384";
+        address = "127.0.0.1:8384";
         user = "mike";
         password = "$2y$10$8ZlCK0LtEAkeHVm3LxcAweLOJ9h2.B9HvULsPTqIC5YUkEwMuYwSq";
         apiKey = "ac7rxJRAiFTDY9HqpGevAgSH4SGMDP9u";
