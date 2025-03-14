@@ -100,6 +100,10 @@
           path = "~/Pictures";
           devices = ["server" "computer" "laptop"];
         };
+        "Library" = {
+          path = "~/Library";
+          devices = ["server" "computer" "laptop"];
+        };
         "default" = {
           path = "/home/mike/Sync";
           devices = ["server" "computer" "laptop"];

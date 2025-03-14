@@ -40,6 +40,7 @@
     devenv
     fish-lsp
     gcc
+    gnumake
     go
     lua
     lua-language-server
