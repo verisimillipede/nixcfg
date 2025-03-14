@@ -51,6 +51,28 @@
 
   services.tailscale.enable = true;
 
+  # Syncthing server configuration
+  services.syncthing.settings = {
+    devices = {
+      "computer" = {
+        id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
+        addresses = ["tcp://computer.turkey-mimosa.ts.net"];
+      };
+      "laptop" = {
+        id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
+        addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
+      };
+    };
+    folders = {
+      "Documents".devices = ["computer" "laptop"];
+      "Downloads".devices = ["computer" "laptop"];
+      "Pictures".devices = ["computer" "laptop"];
+      "Library".devices = ["computer" "laptop"];
+      "default".devices = ["computer" "laptop"];
+      "undodir".devices = ["computer" "laptop"];
+    };
+  };
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;

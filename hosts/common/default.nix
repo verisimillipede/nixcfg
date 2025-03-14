@@ -73,44 +73,31 @@
     overrideDevices = true;
     overrideFolders = true;
     settings = {
-      devices = {
-        "server" = {
-          id = "TSIUADB-CQWWY02-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
-          addresses = ["tcp://server.turkey-mimosa.ts.net"];
-        };
-        "computer" = {
-          id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
-          addresses = ["tcp://computer.turkey-mimosa.ts.net"];
-        };
-        "laptop" = {
-          id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
-          addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
-        };
-      };
+
       folders = {
         "Documents" = {
           path = "/home/mike/Documents";
-          devices = ["server" "computer" "laptop"];
+          devices = [];  # Will be set per-host
         };
         "Downloads" = {
           path = "/home/mike/Downloads";
-          devices = ["server" "computer" "laptop"];
+          devices = [];  # Will be set per-host
         };
         "Pictures" = {
           path = "/home/mike/Pictures";
-          devices = ["server" "computer" "laptop"];
+          devices = [];  # Will be set per-host
         };
         "Library" = {
           path = "/home/mike/Library";
-          devices = ["server" "computer" "laptop"];
+          devices = [];  # Will be set per-host
         };
         "default" = {
           path = "/home/mike/Sync";
-          devices = ["server" "computer" "laptop"];
+          devices = [];  # Will be set per-host
         };
         "undodir" = {
           path = "/home/mike/.vim/undodir";
-          devices = ["server" "computer" "laptop"];
+          devices = [];  # Will be set per-host
         };
       };
       options = {
