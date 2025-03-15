@@ -48,7 +48,7 @@
     syncthing.settings = {
       devices = {
         "server" = {
-          id = "TSIUADB-CQWWY02-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
+          id = "TSIUADB-CQWWYO2-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
           addresses = ["tcp://server.turkey-mimosa.ts.net"];
         };
         "laptop" = {
