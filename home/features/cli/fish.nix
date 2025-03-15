@@ -136,8 +136,7 @@ in {
         };
 
         # Software
-        marvin = "appimage-run /opt/marvin/marvin.AppImage";
-        zb = "appimage-run /opt/zen-browser/zen-x86_64.AppImage";
+        marvin = "appimage-run /home/mike/Library/Apps/AppImages/marvin.AppImage";
       };
     };
   };
