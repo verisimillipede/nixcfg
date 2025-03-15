@@ -113,7 +113,7 @@
         deployment = {
           targetHost = "laptop";
           targetUser = "mike";
-          # allowLocalDeployment = true;
+          allowLocalDeployment = true;
           tags = ["laptop"];
           # buildOnTarget = true;
         };
