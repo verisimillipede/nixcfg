@@ -28,14 +28,21 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    colmena = {
+      url = "github:zhaofengli/colmena";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
     zen-browser,
     home-manager,
     disko,
+    colmena,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -74,6 +81,31 @@
       };
       server = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/server
+          inputs.disko.nixosModules.disko
+        ];
+      };
+    };
+    colmena = {
+      meta = {
+        nixpkgs = import nixpkgs {
+          system = "x86_64-linux";
+        };
+        specialArgs = {inherit inputs outputs;};
+      };
+
+      computer = {
+        targetHost = "computer";
+        targetUser = "mike";
+        modules = [
+          ./hosts/computer
+          inputs.disko.nixosModules.disko
+        ];
+      };
+      server = {
+        targetHost = "server";
+        targetUser = "mike";
         modules = [
           ./hosts/server
           inputs.disko.nixosModules.disko
