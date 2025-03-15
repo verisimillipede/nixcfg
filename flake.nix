@@ -100,12 +100,27 @@
           targetHost = "computer";
           targetUser = "mike";
           allowLocalDeployment = true;
+          buildOnTarget = true;
         };
         imports = [
           ./hosts/computer
           inputs.disko.nixosModules.disko
         ];
       };
+
+      laptop = {
+        deployment = {
+          targetHost = "laptop";
+          targetUser = "mike";
+          allowLocalDeployment = true;
+          buildOnTarget = true;
+        };
+        imports = [
+          ./hosts/laptop
+          inputs.disko.nixosModules.disko
+        ];
+      };
+
       server = {
         deployment = {
           targetHost = "server";
