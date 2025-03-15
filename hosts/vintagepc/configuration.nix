@@ -34,14 +34,10 @@
         };
       };
     };
+
     # Tailscale
     tailscale.enable = true;
-    # Avahi
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
+
     # Pipewire
     pipewire = {
       enable = true;
@@ -50,8 +46,10 @@
         support32Bit = true;
       };
     };
+
     # Pulseaudio
     pulseaudio.enable = false;
+
     # Xserver
     xserver = {
       enable = true;

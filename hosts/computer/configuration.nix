@@ -30,6 +30,7 @@
       autoScrub.enable = true;
       autoSnapshot.enable = true;
     };
+
     # Keyd
     keyd = {
       enable = true;
@@ -41,14 +42,10 @@
         };
       };
     };
+
     # Tailscale
     tailscale.enable = true;
-    # Avahi
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      openFirewall = true;
-    };
+
     # Pipewire
     pipewire = {
       enable = true;
@@ -57,8 +54,10 @@
         support32Bit = true;
       };
     };
+
     # Pulseaudio
     pulseaudio.enable = false;
+
     # Xserver
     xserver = {
       enable = true;
@@ -71,10 +70,6 @@
     };
   };
 
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  # };
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

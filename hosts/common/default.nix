@@ -134,9 +134,14 @@
   # Printing
   services.printing = {
     enable = true;
-    drivers = [pkgs.brlaser];
+    # drivers = [pkgs.brlaser];
   };
 
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
   # # Avahi
   # avahi = {
   #   enable = true;
