@@ -43,28 +43,6 @@
     };
     # Tailscale
     tailscale.enable = true;
-
-    # Syncthing computer configuration
-    syncthing.settings = {
-      devices = {
-        "server" = {
-          id = "TSIUADB-CQWWYO2-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
-          addresses = ["tcp://server.turkey-mimosa.ts.net"];
-        };
-        "laptop" = {
-          id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
-          addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
-        };
-      };
-      folders = {
-        "Documents".devices = ["server" "laptop"];
-        "Downloads".devices = ["server" "laptop"];
-        "Pictures".devices = ["server" "laptop"];
-        "Library".devices = ["server" "laptop"];
-        "default".devices = ["server" "laptop"];
-        "undodir".devices = ["server" "laptop"];
-      };
-    };
     # Avahi
     avahi = {
       enable = true;
