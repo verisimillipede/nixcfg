@@ -89,7 +89,7 @@
       };
       folders = {
         "Documents" = {
-          path = "~/Documents";
+          path = "/home/mike/Documents";
           devices = ["server" "computer" "laptop"];
         };
         "Downloads" = {
@@ -97,19 +97,15 @@
           devices = ["server" "computer" "laptop"];
         };
         "Pictures" = {
-          path = "~/Pictures";
+          path = "/home/mike/Pictures";
           devices = ["server" "computer" "laptop"];
         };
         "Library" = {
-          path = "~/Library";
+          path = "/home/mike/Library";
           devices = ["server" "computer" "laptop"];
         };
-        "default" = {
+        "Sync" = {
           path = "/home/mike/Sync";
-          devices = ["server" "computer" "laptop"];
-        };
-        "undodir" = {
-          path = "~/.vim/undodir";
           devices = ["server" "computer" "laptop"];
         };
       };
