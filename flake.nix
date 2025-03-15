@@ -100,7 +100,8 @@
           targetHost = "computer";
           targetUser = "mike";
           allowLocalDeployment = true;
-          buildOnTarget = true;
+          tags = [ "computer" ]
+          # buildOnTarget = true;
         };
         imports = [
           ./hosts/computer
@@ -113,7 +114,8 @@
           targetHost = "laptop";
           targetUser = "mike";
           allowLocalDeployment = true;
-          buildOnTarget = true;
+          tags = [ "laptop" ]
+          # buildOnTarget = true;
         };
         imports = [
           ./hosts/laptop
@@ -126,6 +128,7 @@
           targetHost = "server";
           targetUser = "mike";
           buildOnTarget = true;
+          tags = [ "server" ]
         };
         imports = [
           ./hosts/server
