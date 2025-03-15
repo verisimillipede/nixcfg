@@ -37,6 +37,7 @@
     black
     cargo
     cmake
+    colmena
     devenv
     fish-lsp
     gcc
