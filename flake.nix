@@ -96,17 +96,22 @@
       };
 
       computer = {
-        targetHost = "computer";
-        targetUser = "mike";
-        modules = [
+        deployment = {
+          targetHost = "computer";
+          targetUser = "mike";
+        };
+        imports = [
           ./hosts/computer
           inputs.disko.nixosModules.disko
         ];
       };
       server = {
-        targetHost = "server";
-        targetUser = "mike";
-        modules = [
+        deployment = {
+          targetHost = "server";
+          targetUser = "mike";
+          buildOnTarget = true;
+        };
+        imports = [
           ./hosts/server
           inputs.disko.nixosModules.disko
         ];
