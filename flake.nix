@@ -106,17 +106,17 @@
           inputs.disko.nixosModules.disko
         ];
       };
-      # server = {
-      #   deployment = {
-      #     targetHost = "server";
-      #     targetUser = "mike";
-      #     buildOnTarget = true;
-      #   };
-      #   imports = [
-      #     ./hosts/server
-      #     inputs.disko.nixosModules.disko
-      #   ];
-      # };
+      server = {
+        deployment = {
+          targetHost = "server";
+          targetUser = "mike";
+          buildOnTarget = true;
+        };
+        imports = [
+          ./hosts/server
+          inputs.disko.nixosModules.disko
+        ];
+      };
     };
 
     homeConfigurations = {
