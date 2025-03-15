@@ -99,6 +99,7 @@
         deployment = {
           targetHost = "computer";
           targetUser = "mike";
+          allowLocalDeployment = true;
         };
         imports = [
           ./hosts/computer
