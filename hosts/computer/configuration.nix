@@ -29,14 +29,9 @@
     postgresql = {
       enable = true;
       ensureDatabases = ["mydatabase"];
-      ensureUsers = [
-        {
-          name = "mike";
-          ensurePermissions = {
-            "DATABASE mydatabase" = "ALL PRIVILEGES";
-          };
-        }
-      ];
+      ensureUsers = {
+        name = "mike";
+      };
       authentication = pkgs.lib.mkOverride 10 ''
         #type database  DBuser  auth-method
         local all       all     trust
