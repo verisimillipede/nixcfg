@@ -136,19 +136,20 @@
 
   # Printing
   services.printing.enable = true;
+  services.printing.drivers = [pkgs.brlaser];
 
-  # # Printer
-  # hardware.printers = {
-  #   ensureDefaultPrinter = "lil-brother";
-  #   ensurePrinters = [
-  #     {
-  #       name = "lil-brother";
-  #       location = "Mike's Office";
-  #       deviceUri = "dnssd://Brother%20HL-L3280CDW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-b42200da602d";
-  #       model = "everywhere";
-  #     }
-  #   ];
-  # };
+  # Printer
+  hardware.printers = {
+    ensureDefaultPrinter = "lil-brother";
+    ensurePrinters = [
+      {
+        name = "lil-brother";
+        location = "Mike's Office";
+        deviceUri = "dnssd://Brother%20HL-L3280CDW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-b42200da602d";
+        model = "everywhere";
+      }
+    ];
+  };
 
   # Avahi
   services.avahi = {
