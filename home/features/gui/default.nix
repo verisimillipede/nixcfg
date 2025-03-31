@@ -31,5 +31,8 @@
 
     # Desktop Utilities
     wofi
+
+    #LSP
+    markdown-oxide
   ];
 }
