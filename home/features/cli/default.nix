@@ -104,6 +104,7 @@
     calcurse
     neomutt
     taskwarrior3
+    tokei
     yt-dlp
 
     # System Monitoring
