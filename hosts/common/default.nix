@@ -88,6 +88,10 @@
         };
       };
       folders = {
+        "Code" = {
+          path = "/home/mike/Code";
+          devices = ["server" "computer" "laptop"];
+        };
         "Documents" = {
           path = "/home/mike/Documents";
           devices = ["server" "computer" "laptop"];
