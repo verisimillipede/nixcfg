@@ -45,6 +45,7 @@
     go
     lua
     lua-language-server
+    luarocks
     neovim
     nix-index
     nix-direnv
