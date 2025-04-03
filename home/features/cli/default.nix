@@ -59,6 +59,7 @@
     python312Packages.pip
     python3
     pipx
+    stylua
 
     # System Utilities
     appimage-run
