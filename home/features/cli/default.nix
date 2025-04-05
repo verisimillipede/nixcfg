@@ -39,6 +39,7 @@
     cmake
     colmena
     devenv
+    duckdb
     fish-lsp
     gcc
     gnumake
