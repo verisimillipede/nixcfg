@@ -76,6 +76,12 @@ in {
         h = "history";
         b = "yazi";
 
+        # Zealot + Django
+        zz = "cd /home/mike/Code/zealot/";
+        zzdj = "cd /home/mike/Code/zealot/dj/; and nvim .";
+        rs = "python manage.py runserver";
+        djs = "python manage.py shell";
+
         # Git Commands
         gs = "git status";
         gp = "git pull";
@@ -102,8 +108,6 @@ in {
         # Python & Virtual Environments
         p = "python";
         pm = "python main.py";
-        dj = "python manage.py runserver";
-        ds = "z devsearch; and nvim .";
 
         # Remove and Trash
         rm = "trash";
