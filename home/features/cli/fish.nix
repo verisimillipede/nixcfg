@@ -113,6 +113,8 @@ in {
         rm = "trash";
 
         # Directory Navigation
+        "pd" = "prevd";
+        "nd" = "nextd";
         "-" = "cd ..";
         ".." = "cd ..";
         "..." = "cd ../..";
