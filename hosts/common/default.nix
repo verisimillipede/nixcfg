@@ -143,24 +143,24 @@
   # services.printing.drivers = [pkgs.brlaser];
 
   # Printer
-  hardware.printers = {
-    ensureDefaultPrinter = "lil-brother";
-    ensurePrinters = [
-      {
-        name = "lil-brother";
-        location = "Mike's Office";
-        deviceUri = "ipp://BRW749779E9F617.local:631/ipp/print";
-        model = "everywhere";
-      }
-    ];
-  };
-
-  # Avahi
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
+  # hardware.printers = {
+  #   ensureDefaultPrinter = "lil-brother";
+  #   ensurePrinters = [
+  #     {
+  #       name = "lil-brother";
+  #       location = "Mike's Office";
+  #       deviceUri = "ipp://BRW749779E9F617.local:631/ipp/print";
+  #       model = "everywhere";
+  #     }
+  #   ];
+  # };
+  #
+  # # Avahi
+  # services.avahi = {
+  #   enable = true;
+  #   nssmdns4 = true;
+  #   openFirewall = true;
+  # };
 
   systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
