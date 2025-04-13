@@ -63,6 +63,7 @@ in {
                 bind-key -n M-3 select-window -t 3
                 bind-key -n M-4 select-window -t 4
                 bind-key -n M-5 select-window -t 5
+
                 # Restoring clear screen with prefix + l
                 bind C-l send-keys 'C-l'
 
@@ -85,9 +86,9 @@ in {
                 bind -T copy-mode-vi v send -X begin-selection
                 bind -T copy-mode-vi y send -X copy-selection-and-cancel
 
-                # TODO: Do i need this?
-                # Copy to system clipboard
-                bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+                # # TODO: Do i need this?
+                # # Copy to system clipboard
+                # bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
                 # Enlarge pane to display over entire window
                 bind z resize-pane -Z
