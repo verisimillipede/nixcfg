@@ -58,11 +58,11 @@ in {
                 bind-key -n M-Space next-window
 
                 # Go to specific windows with Alt + number
-                # bind-key -n M-1 select-window -t 1
-                # bind-key -n M-2 select-window -t 2
-                # bind-key -n M-3 select-window -t 3
-                # bind-key -n M-4 select-window -t 4
-                # bind-key -n M-5 select-window -t 5
+                bind-key -n M-1 select-window -t 1
+                bind-key -n M-2 select-window -t 2
+                bind-key -n M-3 select-window -t 3
+                bind-key -n M-4 select-window -t 4
+                bind-key -n M-5 select-window -t 5
                 # Restoring clear screen with prefix + l
                 bind C-l send-keys 'C-l'
 
@@ -95,10 +95,9 @@ in {
                 # Better pane selection in prefix
                 # bind -n C-/ display-panes
 
-                # Create new window
+                # Create new window (both with and without prefix)
                 bind c new-window
-
-
+                bind-key -n M-t new-window
 
                 # Refresh 'status-left' and 'status-right' more often, from every 15s to 5s
                 set -g status-interval 5
