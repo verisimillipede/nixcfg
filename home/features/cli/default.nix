@@ -65,6 +65,7 @@
     # System Utilities
     appimage-run
     bottom
+    clipse
     coreutils
     docker
     docker-compose
