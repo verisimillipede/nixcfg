@@ -27,12 +27,10 @@ in {
         set -U fish_key_bindings fish_vi_key_bindings
         bind -M insert \cp history-search-backward
         bind -M insert \cn history-search-forward
-        bind -M insert '`' accept-autosuggestion
-        bind -M default \cS\x20 expand-abbr # Ctrl + Shift + Space to prevent abbreviation expansion
-        bind -M insert \cS\x20 expand-abbr # Ctrl + Shift + Space to prevent abbreviation expansion
+        bind -M insert \ce accept-autosuggestion
+        bind -M insert \cs expand-abbr # Ctrl + Shift + Space to prevent abbreviation expansion
       '';
 
-      # bind -M \ce accept-autosuggestion
       shellAbbrs = {
         # List Directory Contents
         ls = "eza";
