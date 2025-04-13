@@ -95,6 +95,7 @@
     wireguard-tools
 
     # File Management
+    exiftool
     lf
     nnn
     yazi
