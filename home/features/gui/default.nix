@@ -28,9 +28,9 @@
     # Terminal Emulators
     alacritty
     kitty
+    ghostty
 
     # Desktop Utilities
     wofi
-    
   ];
 }
