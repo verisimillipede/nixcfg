@@ -81,14 +81,11 @@ in {
                 bind -n S-Right resize-pane -R 2
 
 
-                # Copy text
-                setw -g mode-keys vi
+                # Copy to system clipboard
+                unbind -T copy-mode MouseDragEnd1Pane
+                bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-pipe-and-cancel "wl-copy"
                 bind -T copy-mode-vi v send -X begin-selection
-                bind -T copy-mode-vi y send -X copy-selection-and-cancel
-
-                # # TODO: Do i need this?
-                # # Copy to system clipboard
-                # bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+                bind -T copy-mode-vi y send -X copy-pipe-and-cancel "wl-copy"
 
                 # Enlarge pane to display over entire window
                 bind z resize-pane -Z
