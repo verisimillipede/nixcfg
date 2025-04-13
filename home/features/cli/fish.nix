@@ -28,7 +28,6 @@ in {
         bind -M insert \cp history-search-backward
         bind -M insert \cn history-search-forward
         bind -M insert \ce accept-autosuggestion
-        bind -M insert \cs expand-abbr # Ctrl + Shift + Space to prevent abbreviation expansion
       '';
 
       shellAbbrs = {
