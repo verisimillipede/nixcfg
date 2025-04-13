@@ -149,7 +149,7 @@
       {
         name = "lil-brother";
         location = "Mike's Office";
-        deviceUri = "dnssd://Brother%20HL-L3280CDW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-94ddf80a7f35";
+        deviceUri = "ipp://BRW749779E9F617.local:631/ipp/print";
         model = "everywhere";
       }
     ];
