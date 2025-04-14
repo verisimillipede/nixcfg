@@ -12,7 +12,9 @@
     inputs.zen-browser.packages.${system}.default
     lagrange
 
+    gnome-extension-manager
     gnomeExtensions.pano
+    gnomeExtensions.clipboard-history
 
     # Media and Entertainment
     vlc
