@@ -85,6 +85,7 @@
     unzip
     wget
     which
+    wl-clipboard
     xz
     zip
     p7zip
