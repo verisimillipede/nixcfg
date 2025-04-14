@@ -12,6 +12,8 @@
     inputs.zen-browser.packages.${system}.default
     lagrange
 
+    gnomeExtensions.pano
+
     # Media and Entertainment
     vlc
     mpv
