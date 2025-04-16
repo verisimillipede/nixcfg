@@ -19,7 +19,7 @@ in {
       clock24 = true;
       disableConfirmationPrompt = true;
       keyMode = "vi";
-      prefix = "C-a";
+      prefix = "C-Space";
       terminal = "screen-256color";
       plugins = with pkgs.tmuxPlugins; [
         copycat
@@ -42,10 +42,10 @@ in {
                 # source-file ~/.config/tmux/conf/keybindings.conf
                 # left status is only length of 10
                 set -g status-left-length 50
-                # Enter prefix mode easily
-                unbind C-b
-                set -g prefix C-Space
-                bind C-Space send-prefix
+                # # Enter prefix mode easily
+                # unbind C-b
+                # set -g prefix C-Space
+                # bind C-Space send-prefix
 
                 set -g base-index 1 # Start windows and panes at 1
                 set -g pane-base-index 1 # Start panes at 1
