@@ -15,6 +15,7 @@
     gnome-extension-manager
     gnomeExtensions.pano
     gnomeExtensions.clipboard-history
+    gnome-tweaks
 
     # Media and Entertainment
     vlc
