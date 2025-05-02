@@ -155,12 +155,12 @@
   #   ];
   # };
   #
-  # # Avahi
-  # services.avahi = {
-  #   enable = true;
-  #   nssmdns4 = true;
-  #   openFirewall = true;
-  # };
+  # Avahi
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
