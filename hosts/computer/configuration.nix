@@ -12,6 +12,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
+  boot.kernelPackages = pkgs.linuxPackages_6_12;
+  boot.zfs.package = pkgs.zfs_2_3;
 
   # Enable networking
   networking.networkmanager.enable = true;
