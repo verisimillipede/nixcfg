@@ -40,6 +40,7 @@
     colmena
     devenv
     duckdb
+    emacs
     fish-lsp
     gcc
     gnumake
