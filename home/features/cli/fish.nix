@@ -14,6 +14,7 @@ in {
       shellInit = ''
         set -U fish_greeting
         fish_add_path /home/mike/.local/bin
+        fish_add_path /home/mike/.emacs.d/bin
       '';
 
       interactiveShellInit = ''
