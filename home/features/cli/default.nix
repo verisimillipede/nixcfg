@@ -101,6 +101,7 @@
     exiftool
     lf
     nnn
+    pandoc
     yazi
 
     # Version Control
