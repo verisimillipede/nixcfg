@@ -96,6 +96,7 @@
     httpie
     nmap
     wireguard-tools
+    nerdfonts
 
     # File Management
     exiftool
