@@ -45,6 +45,7 @@
     gcc
     gnumake
     go
+    ispell
     lua
     lua-language-server
     luarocks
