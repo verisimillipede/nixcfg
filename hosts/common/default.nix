@@ -113,6 +113,10 @@
           path = "/home/mike/Sync";
           devices = ["server" "computer" "laptop"];
         };
+        ".spacemacs.d" = {
+          path = "/home/mike/.spacemacs.d";
+          devices = ["server" "computer" "laptop"];
+        };
       };
       options = {
         globalAnnounceEnabled = true;
