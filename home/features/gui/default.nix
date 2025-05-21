@@ -27,7 +27,8 @@
     bitwarden
     obsidian
     libreoffice-still
-    dropbox
+    maestral
+    maestral-gui
 
     # Terminal Emulators
     alacritty
