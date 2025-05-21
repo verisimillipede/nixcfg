@@ -27,6 +27,7 @@
     bitwarden
     obsidian
     libreoffice-still
+    dropbox
 
     # Terminal Emulators
     alacritty
