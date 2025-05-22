@@ -20,7 +20,7 @@ in {
       interactiveShellInit = ''
         set -gx EDITOR nvim
         set -gx VISUAL nvim
-        set -gx BROWSER zen
+        set -gx BROWSER /etc/profiles/per-user/mike/bin/zen
         set -gx TERMINAL kitty
         set -gx HOME /home/mike
         set -gx XDG_CONFIG_HOME $HOME/.config
