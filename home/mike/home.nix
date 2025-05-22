@@ -9,33 +9,6 @@
   lib,
   ...
 }: {
-  # home.packages = with pkgs; [
-  #   bitwarden
-  #   obsidian
-  #   libreoffice-still
-  #   spotify
-  #   thunderbird
-  #   firefox
-  #   plexamp
-  #   python312
-  #   python312Packages.numpy
-  #   python312Packages.pip
-  #   python3
-  #   nixd
-  #   sl
-  #   hugo
-  #   openssl
-  #   pipx
-  #   nodejs
-  #   nodejs_22
-  #   lagrange
-  #   lua
-  #   luarocks
-  #   inputs.zen-browser.packages."${system}".default
-  #   go
-  #   vlc
-  #   poetry
-  # ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = lib.mkDefault "mike";
