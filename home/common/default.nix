@@ -31,6 +31,11 @@
     };
   };
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "zen";
+    TERMINAL = "kitty";
+  };
   nix = {
     package = lib.mkDefault pkgs.nix;
     settings = {
