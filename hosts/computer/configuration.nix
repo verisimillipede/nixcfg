@@ -28,6 +28,10 @@
 
   # Services
   services = {
+    emacs = {
+      enable = true;
+      startWithGraphical = true;
+    };
     postgresql = {
       enable = true;
       ensureDatabases = ["mydatabase"];
