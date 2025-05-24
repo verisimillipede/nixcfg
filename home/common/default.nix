@@ -69,5 +69,4 @@
       warn-dirty = false;
     };
   };
-  home-manager.backupFileExtension = "backup";
 }
