@@ -87,6 +87,10 @@
           id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
           addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
         };
+        "iphone" = {
+          id = "WCOEKIC-TQBCTT7-IV456UD-F7JS35L-YJUF3UN-6IYBSR2-EYQV7NX-AXQMVAR";
+          addresses = ["tcp://mikeh-apple-phone.turkey-mimosa.ts.net"];
+        };
       };
       folders = {
         "Code" = {
@@ -95,7 +99,7 @@
         };
         "Documents" = {
           path = "/home/mike/Documents";
-          devices = ["server" "computer" "laptop"];
+          devices = ["server" "computer" "laptop" "iphone"];
         };
         "Downloads" = {
           path = "/home/mike/Downloads";
