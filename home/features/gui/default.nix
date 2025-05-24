@@ -17,6 +17,7 @@
     gnome-tweaks
 
     # Media and Entertainment
+    darktable
     vlc
     mpv
     plexamp
@@ -39,5 +40,4 @@
     # Desktop Utilities
     wofi
   ];
-
 }
