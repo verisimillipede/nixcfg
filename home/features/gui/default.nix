@@ -18,6 +18,7 @@
 
     # Media and Entertainment
     darktable
+    ansel
     vlc
     mpv
     plexamp
