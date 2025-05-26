@@ -58,6 +58,7 @@
   home.sessionVariables = {
   };
 
+
   programs = {
     # Basic configuration of git
     git = {
