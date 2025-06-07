@@ -49,6 +49,7 @@
     lua
     lua-language-server
     luarocks
+    maestral
     neovim
     nix-index
     nix-direnv
