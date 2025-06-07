@@ -66,6 +66,8 @@
   # Pulseaudio
   services.pulseaudio.enable = false;
 
+  services.emacs.enable = true;
+
   services.tailscale.enable = true;
 
   services.pipewire = {
