@@ -134,7 +134,6 @@
     comma
     direnv
     just
-    thefuck
     tldr
   ];
 }
