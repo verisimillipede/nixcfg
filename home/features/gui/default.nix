@@ -10,6 +10,7 @@
     inputs.zen-browser.packages.${system}.default
 
     lagrange
+    sioyek
 
     gnome-extension-manager
     gnomeExtensions.pano
