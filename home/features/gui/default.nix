@@ -11,7 +11,6 @@
 
     lagrange
     sioyek
-
     gnome-extension-manager
     gnomeExtensions.pano
     gnomeExtensions.clipboard-history

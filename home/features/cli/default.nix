@@ -135,5 +135,7 @@
     direnv
     just
     tldr
+    libtool
+    libvterm
   ];
 }
