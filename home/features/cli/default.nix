@@ -41,6 +41,7 @@
     devenv
     duckdb
     emacs
+    systemctl-tui
     fish-lsp
     gcc
     gnumake
@@ -56,6 +57,8 @@
     nix-prefetch-github
     nix-output-monitor
     nodejs
+    impala
+    iwd
     nodejs_22
     poetry
     python312
