@@ -41,7 +41,7 @@
     devenv
     duckdb
     dblab
-    dbcli
+    pgcli
     emacs
     systemctl-tui
     fish-lsp
