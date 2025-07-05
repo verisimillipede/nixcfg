@@ -40,6 +40,7 @@
     colmena
     devenv
     duckdb
+    dblab
     emacs
     systemctl-tui
     fish-lsp
