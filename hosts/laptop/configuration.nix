@@ -80,13 +80,14 @@
 
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
     xkb = {
       layout = "us";
       variant = "";
     };
   };
+
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   home-manager.backupFileExtension = "backup";
   # This value determines the NixOS release from which the default
