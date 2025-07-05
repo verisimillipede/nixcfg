@@ -63,10 +63,7 @@
     iwd
     nodejs_22
     poetry
-    python312
-    python312Packages.numpy
-    python312Packages.pip
-    python3
+    python314
     pipx
     stylua
 
