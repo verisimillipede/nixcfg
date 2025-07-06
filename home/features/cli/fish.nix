@@ -68,6 +68,7 @@ in {
         r = "nix flake update; and sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
         nrhm = "sudo nixos-rebuild switch --flake .#$hostname; and home-manager switch --flake .#mike@$hostname";
         nc = "cd ~/nixcfg; and nvim .";
+        n = "cd ~/nixcfg";
         ni = "nix-instantiate --eval --strict";
 
         # Quick Access
@@ -77,9 +78,11 @@ in {
 
         # Zealot + Django
         zz = "cd /home/mike/Code/zealot/";
-        zzdj = "cd /home/mike/Code/zealot/dj/; and nvim .";
+        zd = "cd /home/mike/Code/zealot/dj/; and nvim .";
         rs = "python manage.py runserver";
-        djs = "python manage.py shell";
+        s = "python manage.py shell";
+        mm = "python manage.py makemigrations";
+        m = "python manage.py migrate";
 
         # Git Commands
         gs = "git status";
