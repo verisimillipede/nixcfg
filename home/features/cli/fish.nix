@@ -78,7 +78,7 @@ in {
 
         # Zealot + Django
         zz = "cd /home/mike/Code/zealot/";
-        zd = "cd /home/mike/Code/zealot/dj/; and nvim .";
+        zd = "cd /home/mike/Code/zealot/dj/";
         rs = "python manage.py runserver";
         s = "python manage.py shell";
         mm = "python manage.py makemigrations";
