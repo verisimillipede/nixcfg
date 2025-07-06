@@ -83,6 +83,7 @@ in {
         s = "python manage.py shell";
         mm = "python manage.py makemigrations";
         m = "python manage.py migrate";
+        pm = "python manage";
 
         # Git Commands
         gs = "git status";
@@ -106,10 +107,6 @@ in {
 
         # Obsidian
         zk = "cd ~/Documents/Zettlekasten/; and nvim .";
-
-        # Python & Virtual Environments
-        p = "python";
-        pm = "python main.py";
 
         # Remove and Trash
         rm = "trash";
