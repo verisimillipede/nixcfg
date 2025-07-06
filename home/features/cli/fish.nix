@@ -83,7 +83,7 @@ in {
         s = "python manage.py shell";
         mm = "python manage.py makemigrations";
         m = "python manage.py migrate";
-        pm = "python manage";
+        pm = "python manage.py";
 
         # Git Commands
         gs = "git status";
