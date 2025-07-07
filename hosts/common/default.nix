@@ -106,6 +106,10 @@
           path = "/home/mike/Downloads";
           devices = ["server" "computer" "laptop"];
         };
+        "Music" = {
+          path = "/home/mike/music";
+          devices = ["server" "computer" "laptop"];
+        };
         "Pictures" = {
           path = "/home/mike/Pictures";
           devices = ["server" "computer" "laptop"];
