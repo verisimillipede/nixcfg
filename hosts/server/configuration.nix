@@ -71,11 +71,13 @@
         };
       }
     ];
+    li
     authentication = pkgs.lib.mkOverride 10 ''
-      #type database  DBuser  auth-method
-      local all       all     trust
-      host    all       all   127.0.0.1/32   trust
-      host    all       all   ::1/128        trust
+      # type database  DBuser  address       auth-method
+        local all       all                   trust
+        host  all       all     127.0.0.1/32  trust
+        host  all       all     ::1/128       trust
+        host  all       all     100.64.0.0/10 trust
     '';
   };
   programs.ssh.startAgent = true;
