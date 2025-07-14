@@ -71,6 +71,7 @@
         };
       }
     ];
+    enableTCPIP = true;
     authentication = pkgs.lib.mkOverride 10 ''
       # TYPE  DATABASE  DBUSER  ADDRESS       AUTH-METHOD
         local all       all                   trust
