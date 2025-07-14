@@ -1,7 +1,7 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{...}: {
+{pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -58,7 +58,26 @@
       support32Bit = true;
     };
   };
-
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = ["mydatabase"];
+    ensureUsers = [
+      {
+        name = "mike";
+        ensureClauses = {
+          superuser = true;
+          createrole = true;
+          createdb = true;
+        };
+      }
+    ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+      host    all       all   127.0.0.1/32   trust
+      host    all       all   ::1/128        trust
+    '';
+  };
   programs.ssh.startAgent = true;
 
   # services.xserver = {
