@@ -17,10 +17,6 @@
     gnome-tweaks
 
     # Media and Entertainment
-    darktable
-    ansel
-    shotwell
-    digikam
     vlc
     mpv
     plexamp
