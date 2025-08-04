@@ -104,7 +104,6 @@
     # File Management
     exiftool
     lf
-    nnn
     pandoc
     yazi
 
