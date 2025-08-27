@@ -35,6 +35,7 @@
     alejandra
     basedpyright
     black
+    calcure
     cargo
     cmake
     colmena
