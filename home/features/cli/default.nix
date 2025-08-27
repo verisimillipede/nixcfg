@@ -112,7 +112,7 @@
     lazygit
 
     # CLI Applications
-    aider-chat
+    # aider-chat
     calcurse
     neomutt
     taskwarrior3
