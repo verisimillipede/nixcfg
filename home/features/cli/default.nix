@@ -37,6 +37,7 @@
     black
     calcure
     pkg-config
+    openssl
     cargo
     cmake
     colmena
