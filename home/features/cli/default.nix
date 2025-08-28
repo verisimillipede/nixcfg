@@ -36,8 +36,7 @@
     basedpyright
     black
     calcure
-    pkg-config
-    openssl
+    zathura
     cargo
     cmake
     colmena
