@@ -36,6 +36,7 @@
     basedpyright
     black
     calcure
+    pkg-config
     cargo
     cmake
     colmena
