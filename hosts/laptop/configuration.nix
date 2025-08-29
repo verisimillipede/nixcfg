@@ -87,8 +87,8 @@
     };
   };
 
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  # services.displayManager.gdm.enable = true;
+  # services.desktopManager.gnome.enable = true;
   programs.steam.enable = true;
 
   programs.hyprland = {
