@@ -79,7 +79,6 @@
       support32Bit = true;
     };
   };
-
   services.xserver = {
     enable = true;
     xkb = {
@@ -91,6 +90,12 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   programs.steam.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true; # recommended for most users
+    xwayland.enable = true; # Xwayland can be disabled.
+  };
 
   home-manager.backupFileExtension = "backup";
   # This value determines the NixOS release from which the default
