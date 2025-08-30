@@ -10,6 +10,7 @@
     inputs.zen-browser.packages.${system}.default
     djlint
     steam
+    obs-studio
 
     lagrange
     sioyek
