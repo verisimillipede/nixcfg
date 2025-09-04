@@ -13,7 +13,6 @@
     obs-studio
     tetex
 
-    lagrange
     sioyek
     gnome-extension-manager
     gnomeExtensions.pano
