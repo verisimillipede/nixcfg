@@ -11,6 +11,7 @@
     djlint
     steam
     obs-studio
+    tetex
 
     lagrange
     sioyek
