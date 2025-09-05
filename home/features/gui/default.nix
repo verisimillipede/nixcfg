@@ -12,6 +12,7 @@
     steam
     obs-studio
     tetex
+    vale
 
     sioyek
     gnome-extension-manager
