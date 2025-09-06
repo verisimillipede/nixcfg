@@ -55,6 +55,7 @@
     lua-language-server
     luarocks
     maestral
+    mathjax-node-cli
     neovim
     nix-index
     nix-direnv
