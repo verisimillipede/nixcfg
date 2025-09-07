@@ -26,6 +26,10 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
+  environment.systemPackages = [
+    pkgs.linuxKernel.packages.linux_zen.v4l2loopback
+  ];
+
   # Services
   services = {
     zfs = {
