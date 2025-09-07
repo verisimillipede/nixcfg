@@ -41,6 +41,7 @@
     cargo
     cmake
     colmena
+    delta
     devenv
     duckdb
     dblab
