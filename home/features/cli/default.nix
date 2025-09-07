@@ -34,6 +34,7 @@
     # Development Tools
     alejandra
     basedpyright
+    bat-extras.core
     black
     calcure
     zathura
