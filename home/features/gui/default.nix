@@ -13,6 +13,7 @@
     obs-studio
     tetex
     vale
+    zoom-us
 
     sioyek
     gnome-extension-manager
