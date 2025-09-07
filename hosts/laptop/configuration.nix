@@ -14,7 +14,7 @@
   boot.supportedFilesystems = ["zfs"];
   boot.kernelPackages = pkgs.linuxPackages_6_12;
   boot.zfs.package = pkgs.zfs_2_3;
-
+  # boot.kernelModules = [ "v4l2loopback" ];
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "8425e349";
@@ -26,9 +26,9 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  environment.systemPackages = [
-    pkgs.linuxKernel.packages.linux_zen.v4l2loopback
-  ];
+  # environment.systemPackages = [
+  #   pkgs.linuxKernel.packages.linux_zen.v4l2loopback
+  # ];
 
   # Services
   services = {
