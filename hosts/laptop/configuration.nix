@@ -1,7 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -26,10 +30,11 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  boot.kernelModules = ["v4l2loopback"];
-  environment.systemPackages = [
-    pkgs.linuxKernel.packages.linux_zen.v4l2loopback
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
   ];
+
+  boot.kernelModules = ["v4l2loopback"];
 
   # Services
   services = {
