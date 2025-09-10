@@ -47,6 +47,7 @@
     dblab
     pgcli
     emacs
+    ethtool
     systemctl-tui
     fish-lsp
     gcc
