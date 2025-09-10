@@ -147,14 +147,10 @@
 
   # Sudo
   security.sudo.wheelNeedsPassword = false;
-
   # Printing
-  services.printing.enable = true;
-  # services.printing.drivers = [pkgs.brlaser];
-
-  # Printer
-  hardware.printers = {
-    ensureDefaultPrinter = "lil-brother";
+  services.printing = {
+    enable = true;
+    # drivers = [ pkgs.brlaser ]; # optional, try without first if "everywhere" works
     ensurePrinters = [
       {
         name = "lil-brother";
@@ -163,6 +159,7 @@
         model = "everywhere";
       }
     ];
+    ensureDefaultPrinter = "lil-brother";
   };
 
   # Avahi
@@ -171,6 +168,30 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  # Printing
+  # services.printing.enable = true;
+  # services.printing.drivers = [pkgs.brlaser];
+
+  # # Printer
+  # hardware.printers = {
+  #   ensureDefaultPrinter = "lil-brother";
+  #   ensurePrinters = [
+  #     {
+  #       name = "lil-brother";
+  #       location = "Mike's Workshop";
+  #       deviceUri = "dnssd://Brother%20HL-L3280CDW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-94ddf86975de";
+  #       model = "everywhere";
+  #     }
+  #   ];
+  # };
+  #
+  # # Avahi
+  # services.avahi = {
+  #   enable = true;
+  #   nssmdns4 = true;
+  #   openFirewall = true;
+  # };
 
   systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
