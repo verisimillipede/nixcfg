@@ -45,19 +45,6 @@
     '';
   };
 
-  services.landing = {
-    proxyServices = [
-      {
-        name = "/ntopng/";
-        title = "ntopng";
-        value = {
-          proxyPass = "http://localhost:${toString config.services.ntopng.http-port}/";
-        };
-      }
-    ];
-  };
-
-  # minimal patch: create user, group, and data dir
   users.users.ntopng = {
     isSystemUser = true;
     group = "ntopng";
