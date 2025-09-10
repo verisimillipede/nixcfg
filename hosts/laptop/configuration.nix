@@ -36,6 +36,40 @@
 
   boot.kernelModules = ["v4l2loopback"];
 
+  services.ntopng = {
+    enable = true;
+    http-port = 9094;
+    extraConfig = ''
+      --disable-login
+      --http-prefix=/ntopng
+    '';
+  };
+
+  services.landing = {
+    proxyServices = [
+      {
+        name = "/ntopng/";
+        title = "ntopng";
+        value = {
+          proxyPass = "http://localhost:${toString config.services.ntopng.http-port}/";
+        };
+      }
+    ];
+  };
+
+  # minimal patch: create user, group, and data dir
+  users.users.ntopng = {
+    isSystemUser = true;
+    group = "ntopng";
+    home = "/var/lib/ntopng";
+  };
+
+  users.groups.ntopng = {};
+
+  systemd.tmpfiles.rules = [
+    "d /var/lib/ntopng 0700 ntopng ntopng -"
+  ];
+
   # Services
   services = {
     zfs = {
