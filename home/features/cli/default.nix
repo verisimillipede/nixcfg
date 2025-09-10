@@ -64,6 +64,7 @@
     nix-prefetch-github
     nix-output-monitor
     nodejs
+    ntopng
     impala
     iwd
     nodejs_22
