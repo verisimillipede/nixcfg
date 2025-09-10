@@ -152,6 +152,13 @@
   services.printing.enable = true;
   services.printing.drivers = [pkgs.brlaser];
 
+  # Avahi
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   # Printer
   hardware.printers = {
     ensureDefaultPrinter = "lil-brother";
@@ -159,17 +166,10 @@
       {
         name = "lil-brother";
         location = "Mike's Workshop";
-        deviceUri = "dnssd://Brother%20HL-L3280CDW%20series._ipp._tcp.local/?uuid=e3248000-80ce-11db-8000-94ddf86975de";
+        deviceUri = "ipp://192.168.1.117/ipp";
         model = "everywhere";
       }
     ];
-  };
-
-  # Avahi
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
   };
 
   systemd.services.NetworkManager-wait-online.enable = false;
