@@ -38,7 +38,7 @@
 
   services.ntopng = {
     enable = true;
-    http-port = 9094;
+    httpPort = 9094;
     extraConfig = ''
       --disable-login
       --http-prefix=/ntopng

@@ -58,6 +58,7 @@
     luarocks
     maestral
     mathjax-node-cli
+    mtr
     neovim
     nix-index
     nix-direnv
