@@ -32,6 +32,8 @@
   };
   home.packages = with pkgs; [
     # Development Tools
+    hledger
+    puffin
     alejandra
     basedpyright
     bat-extras.core

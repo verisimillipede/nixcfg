@@ -13,6 +13,7 @@
     obs-studio
     tetex
     vale
+    zotero
     zoom-us
 
     sioyek
