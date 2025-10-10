@@ -38,7 +38,6 @@
     basedpyright
     bat-extras.core
     black
-    calcure
     zathura
     cargo
     cmake
