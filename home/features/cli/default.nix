@@ -124,7 +124,6 @@
     # aider-chat
     calcurse
     neomutt
-    taskwarrior3
     tokei
     yt-dlp
 
