@@ -150,7 +150,6 @@
 
   # Printing
   services.printing.enable = true;
-  services.printing.drivers = [pkgs.brlaser];
 
   # Avahi
   services.avahi = {
