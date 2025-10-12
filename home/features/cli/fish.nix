@@ -26,9 +26,9 @@ in {
         set -gx XDG_CONFIG_HOME $HOME/.config
         set -gx MAIL $HOME/Mail
         set -U fish_key_bindings fish_vi_key_bindings
-        bind -M insert \cp history-search-backward
-        bind -M insert \cn history-search-forward
-        bind -M insert \ce accept-autosuggestion
+        bind -M insert ctrl-p history-search-backward
+        bind -M insert ctrl-n history-search-forward
+        bind -M insert ctrl-e accept-autosuggestion
       '';
 
       shellAbbrs = {
@@ -141,9 +141,6 @@ in {
           expansion = "rip -ndb search tidal album '%'";
           setCursor = true;
         };
-
-        # Software
-        marvin = "appimage-run /home/mike/Library/Apps/AppImages/marvin.AppImage";
       };
     };
   };
