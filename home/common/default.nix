@@ -32,7 +32,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "emacs";
     BROWSER = "zen";
     TERMINAL = "kitty";
   };
