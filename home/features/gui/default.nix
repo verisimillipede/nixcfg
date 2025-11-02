@@ -9,7 +9,6 @@
     thunderbird
     inputs.zen-browser.packages.${system}.default
     djlint
-    steam
     obs-studio
     tetex
     vale

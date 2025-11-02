@@ -34,6 +34,7 @@
     # Development Tools
     hledger
     puffin
+    rclone
     alejandra
     basedpyright
     bat-extras.core
