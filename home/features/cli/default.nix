@@ -35,6 +35,7 @@
     hledger
     puffin
     rclone
+    logseq
     alejandra
     basedpyright
     bat-extras.core
