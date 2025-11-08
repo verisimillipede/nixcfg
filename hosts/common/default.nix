@@ -53,6 +53,7 @@
     fira-code
     fira-code-symbols
     nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
     emacsPackages.all-the-icons-nerd-fonts
     mplus-outline-fonts.githubRelease
     dina-font
