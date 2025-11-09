@@ -63,9 +63,9 @@
     # Basic configuration of git
     git = {
       enable = true;
-      userName = "mike";
-      userEmail = "mikehall@mikehall94.com";
-      extraConfig = {
+      settings = {
+        user.name = "mike";
+        user.email = "mikehall@mikehall94.com";
         init.defaultBranch = "main";
       };
     };
