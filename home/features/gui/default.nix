@@ -14,6 +14,7 @@
     vale
     zotero
     zoom-us
+    orca-slicer
 
     sioyek
     gnome-extension-manager
