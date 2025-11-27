@@ -145,7 +145,7 @@
     comma
     direnv
     just
-    tldr
+    # tldr
     tealdeer
     libtool
     libvterm
