@@ -146,6 +146,7 @@
     direnv
     just
     tldr
+    tealdeer
     libtool
     libvterm
   ];
