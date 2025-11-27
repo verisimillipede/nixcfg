@@ -12,7 +12,7 @@
       "plocate"
       "docker"
     ];
-    packages = [inputs.home-manager.packages.${pkgs.system}.default];
+    packages = [inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default];
   };
   home-manager.users.mike =
     import ../../../home/mike/${config.networking.hostName}.nix;

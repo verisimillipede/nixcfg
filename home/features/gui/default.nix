@@ -7,7 +7,7 @@
     # Browsers and Communication
     firefox
     thunderbird
-    inputs.zen-browser.packages.${system}.default
+    inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     djlint
     obs-studio
     tetex
