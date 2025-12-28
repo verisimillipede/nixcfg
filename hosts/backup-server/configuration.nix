@@ -17,7 +17,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostId = "9de159a6";
+  networking.hostId = "15737776";
   networking.hostName = "backup-server";
 
   # Set your time zone.
