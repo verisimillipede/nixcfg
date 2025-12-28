@@ -4,16 +4,18 @@
 {pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
-    ../common/disko-config.nix
     ./hardware-configuration.nix
+    ../common/disko-config.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["zfs"];
-  boot.kernelPackages = pkgs.linuxPackages_6_12;
-  boot.zfs.package = pkgs.zfs_2_3;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  # boot.zfs = {
+  #   package = pkgs.zfs_unstable;
+  # };
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -26,52 +28,36 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
+  virtualisation.docker.enable = true;
   # Services
-  services = {
-    emacs = {
-      enable = true;
-    };
-    zfs = {
-      autoScrub.enable = true;
-      autoSnapshot.enable = true;
-    };
-
-    # Keyd
-    keyd = {
-      enable = true;
-      # Swap capslock with ctrl + esc
-      keyboards.default.settings = {
-        main = {
-          capslock = "overload(control, esc)";
-          esc = "capslock";
-        };
-      };
-    };
-
-    # Tailscale
-    tailscale.enable = true;
-
-    # Pipewire
-    pipewire = {
-      enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-    };
-
-    # Pulseaudio
-    pulseaudio.enable = false;
-
+  services.zfs = {
+    autoScrub.enable = true;
+    autoSnapshot.enable = true;
   };
 
-  services.xserver = {
+  services.keyd = {
     enable = true;
-    xkb = {
-      layout = "us";
-      variant = "";
+    # Swap capslock with ctrl + esc
+    keyboards.default.settings = {
+      main = {
+        capslock = "overload(control, esc)";
+        esc = "capslock";
+      };
     };
   };
+
+  services.tailscale.enable = true;
+  programs.ssh.startAgent = true;
+
+  # services.xserver = {
+  #   enable = true;
+  #   displayManager.gdm.enable = true;
+  #   desktopManager.gnome.enable = true;
+  #   xkb = {
+  #     layout = "us";
+  #     variant = "";
+  #   };
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
