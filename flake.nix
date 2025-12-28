@@ -177,6 +177,11 @@
         extraSpecialArgs = {inherit self inputs outputs;};
         modules = [./home/mike/server.nix];
       };
+      "mike@backup-server" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit self inputs outputs;};
+        modules = [./home/mike/backup-server.nix];
+      };
     };
   };
 }
