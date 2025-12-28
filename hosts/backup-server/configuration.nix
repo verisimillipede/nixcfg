@@ -18,7 +18,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "9de159a6";
-  networking.hostName = "computer";
+  networking.hostName = "backup-server";
 
   # Set your time zone.
   time.timeZone = "America/Edmonton";
@@ -31,27 +31,6 @@
     emacs = {
       enable = true;
     };
-    postgresql = {
-      enable = true;
-      ensureDatabases = ["mydatabase"];
-      ensureUsers = [
-        {
-          name = "mike";
-          ensureClauses = {
-            superuser = true;
-            createrole = true;
-            createdb = true;
-          };
-        }
-      ];
-      authentication = pkgs.lib.mkOverride 10 ''
-        #type database  DBuser  auth-method
-        local all       all     trust
-        host    all       all   127.0.0.1/32   trust
-        host    all       all   ::1/128        trust
-      '';
-    };
-
     zfs = {
       autoScrub.enable = true;
       autoSnapshot.enable = true;
