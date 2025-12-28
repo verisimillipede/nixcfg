@@ -86,6 +86,13 @@
           inputs.disko.nixosModules.disko
         ];
       };
+      backup-server = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/backup-server
+          inputs.disko.nixosModules.disko
+        ];
+      };
     };
     colmena = {
       meta = {
@@ -132,6 +139,18 @@
         };
         imports = [
           ./hosts/server
+          inputs.disko.nixosModules.disko
+        ];
+      };
+      backup-server = {
+        deployment = {
+          targetHost = "backup-server";
+          targetUser = "mike";
+          buildOnTarget = true;
+          tags = ["backup-server"];
+        };
+        imports = [
+          ./hosts/backup-server
           inputs.disko.nixosModules.disko
         ];
       };
