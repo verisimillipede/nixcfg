@@ -97,7 +97,7 @@
         };
         "Documents" = {
           path = "/home/mike/Documents";
-          devices = ["server" "computer" "laptop" "iphone"];
+          devices = ["server" "computer" "laptop"];
         };
         "Downloads" = {
           path = "/home/mike/Downloads";
