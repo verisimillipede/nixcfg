@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ../../cli/fish.nix
-    ../../cli/tmux.nix
+    ../cli/fish.nix
+    ../cli/tmux.nix
   ];
 
   programs = {
