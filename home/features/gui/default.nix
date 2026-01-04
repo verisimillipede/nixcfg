@@ -17,6 +17,7 @@
     orca-slicer
     bambu-studio
     sioyek
+    logseq
     gnome-extension-manager
     gnomeExtensions.pano
     gnomeExtensions.clipboard-history

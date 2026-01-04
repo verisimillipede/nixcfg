@@ -31,27 +31,45 @@
     };
   };
   home.packages = with pkgs; [
+    rclone
+    tealdeer
+    lazygit
+    yazi
+    file
+    htop
+    fzf
+    ncdu
+    ripgrep
+    rsync
+    trash-cli
+    plocate
+    tree
+    which
+    wl-clipboard
+    docker
+    docker-compose
+    fd
+    neovim
+    systemctl-tui
+    emacs
+
     # Development Tools
     hledger
     puffin
-    rclone
-    logseq
+    cmake
     alejandra
     basedpyright
     bat-extras.core
     black
     zathura
     cargo
-    cmake
     colmena
     delta
     devenv
-    duckdb
-    dblab
+    # duckdb
+    # dblab
     pgcli
-    emacs
     ethtool
-    systemctl-tui
     fish-lsp
     gcc
     gnumake
@@ -62,14 +80,11 @@
     luarocks
     maestral
     mathjax-node-cli
-    mtr
-    neovim
     nix-index
-    nix-direnv
     nix-prefetch-github
     nix-output-monitor
     nodejs
-    ntopng
+    # ntopng
     impala
     iwd
     nodejs_22
@@ -83,25 +98,11 @@
     bottom
     clipse
     coreutils
-    docker
-    docker-compose
-    fd
-    file
-    fzf
-    htop
     jq
-    ncdu
-    plocate
     procs
     progress
-    ripgrep
-    rsync
-    trash-cli
-    tree
     unzip
     wget
-    which
-    wl-clipboard
     xz
     zip
     p7zip
@@ -116,10 +117,8 @@
     exiftool
     lf
     pandoc
-    yazi
 
     # Version Control
-    lazygit
 
     # CLI Applications
     # aider-chat
@@ -140,13 +139,10 @@
     unimatrix
 
     # Additional Tools
-    atuin
     cheat
     comma
-    direnv
     just
     # tldr
-    tealdeer
     libtool
     libvterm
   ];
