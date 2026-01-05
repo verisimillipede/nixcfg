@@ -17,6 +17,10 @@
   #   package = pkgs.zfs_unstable;
   # };
 
+  fileSystems."/mnt/ssd-1" = {
+    device = "/dev/disk/by-uuid/c14a507f-9b4c-476a-8b0a-30c2371dbd25";
+    fsType = "xfs";
+  };
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "15737776";
@@ -49,15 +53,6 @@
   services.tailscale.enable = true;
   programs.ssh.startAgent = true;
 
-  # services.xserver = {
-  #   enable = true;
-  #   displayManager.gdm.enable = true;
-  #   desktopManager.gnome.enable = true;
-  #   xkb = {
-  #     layout = "us";
-  #     variant = "";
-  #   };
-  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
