@@ -27,6 +27,16 @@
     fsType = "xfs";
   };
 
+  fileSystems."/home/mike/storage" = {
+    device = "/mnt/ssd-1:/mnt/ssd-2";  # Combine the paths into a single string
+    fsType = "mergerfs";
+    options = [
+      "defaults"
+      "category.create=mfs"
+      "moveonenospc=true"
+    ];
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "15737776";
