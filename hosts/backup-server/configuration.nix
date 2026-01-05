@@ -26,6 +26,7 @@
     device = "/dev/disk/by-uuid/38ff4106-6b33-4e9a-ae31-a43faff84959";
     fsType = "xfs";
   };
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "15737776";
@@ -54,6 +55,8 @@
       };
     };
   };
+
+  environment.systemPackages = [ pkgs.mergerfs ];
 
   services.tailscale.enable = true;
   programs.ssh.startAgent = true;
