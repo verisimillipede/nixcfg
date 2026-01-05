@@ -21,6 +21,11 @@
     device = "/dev/disk/by-uuid/c14a507f-9b4c-476a-8b0a-30c2371dbd25";
     fsType = "xfs";
   };
+
+  fileSystems."/mnt/ssd-2" = {
+    device = "/dev/disk/by-uuid/38ff4106-6b33-4e9a-ae31-a43faff84959";
+    fsType = "xfs";
+  };
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "15737776";
