@@ -27,7 +27,7 @@
     fsType = "xfs";
   };
 
-  fileSystems."/home/mike/storage" = {
+  fileSystems."/home/mike/storage" = { # Credit for this goes to soltros on github
     device = "/mnt/ssd-1:/mnt/ssd-2";  # Combine the paths into a single string
     fsType = "mergerfs";
     options = [
