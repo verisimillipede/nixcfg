@@ -18,7 +18,6 @@
   boot.supportedFilesystems = ["zfs"];
   boot.kernelPackages = pkgs.linuxPackages_6_12;
   boot.zfs.package = pkgs.zfs_2_3;
-  # boot.kernelModules = [ "v4l2loopback" ];
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "8425e349";
@@ -64,26 +63,26 @@
       autoSnapshot.enable = true;
     };
 
-    postgresql = {
-      enable = true;
-      ensureDatabases = ["mydatabase"];
-      ensureUsers = [
-        {
-          name = "mike";
-          ensureClauses = {
-            superuser = true;
-            createrole = true;
-            createdb = true;
-          };
-        }
-      ];
-      authentication = pkgs.lib.mkOverride 10 ''
-        #type database  DBuser  auth-method
-        local all       all     trust
-        host    all       all   127.0.0.1/32   trust
-        host    all       all   ::1/128        trust
-      '';
-    };
+    # postgresql = {
+    #   enable = true;
+    #   ensureDatabases = ["mydatabase"];
+    #   ensureUsers = [
+    #     {
+    #       name = "mike";
+    #       ensureClauses = {
+    #         superuser = true;
+    #         createrole = true;
+    #         createdb = true;
+    #       };
+    #     }
+    #   ];
+    #   authentication = pkgs.lib.mkOverride 10 ''
+    #     #type database  DBuser  auth-method
+    #     local all       all     trust
+    #     host    all       all   127.0.0.1/32   trust
+    #     host    all       all   ::1/128        trust
+    #   '';
+    # };
   };
 
   services.keyd = {
@@ -121,12 +120,6 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   programs.steam.enable = true;
-
-  # programs.hyprland = {
-  #   enable = true;
-  #   withUWSM = true; # recommended for most users
-  #   xwayland.enable = true; # Xwayland can be disabled.
-  # };
 
   home-manager.backupFileExtension = "backup";
   # This value determines the NixOS release from which the default
