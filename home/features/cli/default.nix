@@ -81,13 +81,14 @@
     maestral
     mathjax-node-cli
     nix-index
+    nix-direnv
     nix-prefetch-github
     nix-output-monitor
     nodejs
     # ntopng
     impala
     iwd
-    # nodejs_22
+    nodejs_22
     poetry
     python314
     pipx
