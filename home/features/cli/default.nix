@@ -89,7 +89,7 @@
     impala
     iwd
     # nodejs_22
-    poetry
+    # poetry
     python314
     pipx
     stylua
