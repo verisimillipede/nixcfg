@@ -73,6 +73,7 @@
     fish-lsp
     gcc
     gnumake
+    gnuplot
     go
     ispell
     lua
