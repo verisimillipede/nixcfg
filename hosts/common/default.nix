@@ -156,17 +156,17 @@
   };
 
   # Printer
-  hardware.printers = {
-    ensureDefaultPrinter = "lil-brother";
-    ensurePrinters = [
-      {
-        name = "lil-brother";
-        location = "Mike's Workshop";
-        deviceUri = "ipp://192.168.1.117/ipp";
-        model = "everywhere";
-      }
-    ];
-  };
+  # hardware.printers = {
+  #   ensureDefaultPrinter = "lil-brother";
+  #   ensurePrinters = [
+  #     {
+  #       name = "lil-brother";
+  #       location = "Mike's Workshop";
+  #       deviceUri = "ipp://192.168.1.117/ipp";
+  #       model = "everywhere";
+  #     }
+  #   ];
+  # };
 
   systemd.services.NetworkManager-wait-online.enable = false;
   nix = {
