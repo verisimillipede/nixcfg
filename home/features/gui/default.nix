@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
+    digikam
     firefox
     thunderbird
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default

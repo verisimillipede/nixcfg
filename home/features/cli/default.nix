@@ -31,6 +31,7 @@
     };
   };
   home.packages = with pkgs; [
+    exiftool
     rclone
     tealdeer
     lazygit
