@@ -24,7 +24,7 @@
   networking.hostName = "laptop";
 
   # Set your time zone.
-  time.timeZone = "America/St_Lucia";
+  time.timeZone = "America/Edmonton";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
