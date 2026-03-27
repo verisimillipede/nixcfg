@@ -74,7 +74,7 @@
   environment.systemPackages = [ pkgs.mergerfs ];
 
   services.tailscale.enable = true;
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
 
   services.xserver = {
     enable = true;
