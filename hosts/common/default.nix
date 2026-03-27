@@ -89,6 +89,10 @@
           id = "3BWQ73Y-4CVISWV-XJ7QKTG-WOEMDYT-NP2353D-VZTPI2J-CPHFMMU-74ED4QI";
           addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
         };
+        "backup-server" = {
+          id = "QGJSJEB-5G6TPY5-RBTH2F2-XAHDUBE-JOUKGX5-GXBUKAU-2HEDENZ-TCKM3AX";
+          addresses = ["tcp://laptop.turkey-mimosa.ts.net"];
+        };
       };
       folders = {
         "Code" = {
