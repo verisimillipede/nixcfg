@@ -1,7 +1,8 @@
 {...}: {
   imports = [
     ./home.nix
-    ../features/servers
+    ../features/cli
+    ../features/gui
     ../common
   ];
 
