@@ -101,12 +101,10 @@
         };
         "Documents" = {
           path = "/home/mike/Documents";
-          devices = ["server" "computer" "laptop"];
           devices = ["backup-server" "server" "computer" "laptop"];
         };
         "Downloads" = {
           path = "/home/mike/Downloads";
-          devices = ["server" "computer" "laptop"];
           devices = ["backup-server" "server" "computer" "laptop"];
         };
         "Music" = {
