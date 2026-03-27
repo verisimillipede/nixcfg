@@ -80,6 +80,7 @@
         "server" = {
           id = "TSIUADB-CQWWYO2-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
           addresses = ["tcp://server.turkey-mimosa.ts.net"];
+          autoAcceptFolders = true;
         };
         "computer" = {
           id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
