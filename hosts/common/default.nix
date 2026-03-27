@@ -102,10 +102,12 @@
         "Documents" = {
           path = "/home/mike/Documents";
           devices = ["server" "computer" "laptop"];
+          devices = ["backup-server" "server" "computer" "laptop"];
         };
         "Downloads" = {
           path = "/home/mike/Downloads";
           devices = ["server" "computer" "laptop"];
+          devices = ["backup-server" "server" "computer" "laptop"];
         };
         "Music" = {
           path = "/home/mike/music";
@@ -117,11 +119,11 @@
         };
         "Library" = {
           path = "/home/mike/Library";
-          devices = ["server" "computer" "laptop"];
+          devices = ["backup-server" "server" "computer" "laptop"];
         };
         "Sync" = {
           path = "/home/mike/Sync";
-          devices = ["server" "computer" "laptop"];
+          devices = ["backup-server" "server" "computer" "laptop"];
         };
       };
       options = {
@@ -138,7 +140,7 @@
       };
       gui = {
         enabled = true;
-        address = "100.x.x.x:8384";
+        address = "127.0.0.1:8384";
         user = "mike";
         password = "$2y$10$8ZlCK0LtEAkeHVm3LxcAweLOJ9h2.B9HvULsPTqIC5YUkEwMuYwSq";
         apiKey = "ac7rxJRAiFTDY9HqpGevAgSH4SGMDP9u";
