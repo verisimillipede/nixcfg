@@ -80,7 +80,6 @@
         "server" = {
           id = "TSIUADB-CQWWYO2-S7TDVKC-EKTAH5H-FLHQYIH-45RBVGD-3N7NXEC-HKNTJA2";
           addresses = ["tcp://server.turkey-mimosa.ts.net"];
-          autoAcceptFolders = true;
         };
         "computer" = {
           id = "4CA5ZBX-FXTG3LD-PHCCFMT-MGTQO4A-LN7PNRJ-ETT7UWF-EWQLPOO-HYWYBQT";
@@ -139,7 +138,7 @@
       };
       gui = {
         enabled = true;
-        address = "127.0.0.1:8384";
+        address = "100.x.x.x:8384";
         user = "mike";
         password = "$2y$10$8ZlCK0LtEAkeHVm3LxcAweLOJ9h2.B9HvULsPTqIC5YUkEwMuYwSq";
         apiKey = "ac7rxJRAiFTDY9HqpGevAgSH4SGMDP9u";
