@@ -7,6 +7,7 @@
     # Browsers and Communication
     digikam
     firefox
+    google-chrome
     thunderbird
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     djlint
