@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
+    auctex
     digikam
     firefox
     google-chrome
