@@ -41,6 +41,7 @@
     fzf
     ncdu
     ripgrep-all
+    feh
     rsync
     trash-cli
     plocate
