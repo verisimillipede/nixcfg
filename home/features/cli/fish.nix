@@ -18,8 +18,8 @@ in {
       '';
 
       interactiveShellInit = ''
-        set -gx EDITOR emacs
-        set -gx VISUAL emacs
+        set -gx EDITOR emacsclient
+        set -gx VISUAL emacsclient
         set -gx BROWSER zen
         set -gx TERMINAL kitty
         set -gx HOME /home/mike
