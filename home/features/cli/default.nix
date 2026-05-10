@@ -29,6 +29,7 @@
       enable = true;
       enableFishIntegration = true;
     };
+    git.signing.format = null;
   };
   home.packages = with pkgs; [
     exiftool

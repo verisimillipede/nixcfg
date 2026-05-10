@@ -157,9 +157,6 @@
   # Sudo
   security.sudo.wheelNeedsPassword = false;
 
-  # Git
-  programs.git.signing.format = null;
-
   # Printing
   services.printing.enable = true;
 
