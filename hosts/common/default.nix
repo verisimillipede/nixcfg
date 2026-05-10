@@ -128,7 +128,7 @@
           devices = ["backup-server" "server" "computer" "laptop"];
         };
         "Spacemacs" = {
-          path = "/home/mike/.spacemacs.d/init.el";
+          path = "/home/mike/.spacemacs.d";
           devices = ["backup-server" "server" "computer" "laptop"];
         };
       };
