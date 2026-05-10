@@ -119,7 +119,6 @@
 
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-  programs.steam.enable = true;
 
   home-manager.backupFileExtension = "backup";
   # This value determines the NixOS release from which the default
