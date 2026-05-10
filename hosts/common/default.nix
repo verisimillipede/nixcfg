@@ -123,6 +123,14 @@
           path = "/home/mike/Sync";
           devices = ["backup-server" "server" "computer" "laptop"];
         };
+        "Emacs Snippets" = {
+          path = "/home/mike/.emacs.d/snippets";
+          devices = ["backup-server" "server" "computer" "laptop"];
+        };
+        "Spacemacs" = {
+          path = "/home/mike/.spacemacs.d/init.el";
+          devices = ["backup-server" "server" "computer" "laptop"];
+        };
       };
       options = {
         globalAnnounceEnabled = true;
