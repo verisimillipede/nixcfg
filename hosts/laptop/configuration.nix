@@ -18,6 +18,8 @@
   boot.supportedFilesystems = ["zfs"];
   boot.kernelPackages = pkgs.linuxPackages_6_12;
   boot.zfs.package = pkgs.zfs_2_3;
+  boot.zfs.forceImportRoot = false;
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostId = "8425e349";
