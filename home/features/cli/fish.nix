@@ -18,8 +18,8 @@ in {
       '';
 
       interactiveShellInit = ''
-        set -gx EDITOR nvim
-        set -gx VISUAL nvim
+        set -gx EDITOR emacsclient
+        set -gx VISUAL emacsclient
         set -gx BROWSER zen
         set -gx TERMINAL kitty
         set -gx HOME /home/mike
@@ -74,7 +74,7 @@ in {
         # Quick Access
         c = "clear";
         h = "history";
-        b = "yazi";
+        y = "yazi";
 
         # Zealot + Django
         zz = "cd /home/mike/Code/zealot/";

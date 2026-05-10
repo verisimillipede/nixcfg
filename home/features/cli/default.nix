@@ -40,7 +40,8 @@
     htop
     fzf
     ncdu
-    ripgrep
+    ripgrep-all
+    feh
     rsync
     trash-cli
     plocate
