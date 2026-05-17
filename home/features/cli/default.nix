@@ -34,6 +34,7 @@
   home.packages = with pkgs; [
     exiftool
     rclone
+    ruff
     tealdeer
     lazygit
     yazi
