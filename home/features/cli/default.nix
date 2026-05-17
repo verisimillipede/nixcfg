@@ -35,6 +35,7 @@
     exiftool
     rclone
     ruff
+    shellcheck
     tealdeer
     lazygit
     yazi
