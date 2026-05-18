@@ -108,6 +108,10 @@ in {
         # Obsidian
         zk = "cd ~/Documents/Zettlekasten/; and nvim .";
 
+        # Org
+        t = "cd ~/Code/tangle";
+
+
         # Remove and Trash
         rm = "trash";
 
