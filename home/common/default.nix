@@ -33,24 +33,24 @@
 
   home.sessionVariables = {
     EDITOR = "emacs";
-    BROWSER = "zen";
+    BROWSER = "zen-beta";
     TERMINAL = "kitty";
   };
 
-  xdg.desktopEntries.zen = {
-    name = "Zen Browser";
-    genericName = "Web Browser";
-    exec = "zen %U";
-    terminal = false;
-    categories = ["Network" "WebBrowser"];
-    mimeType = [
-      "text/html"
-      "text/xml"
-      "application/xhtml+xml"
-      "x-scheme-handler/http"
-      "x-scheme-handler/https"
-    ];
-  };
+  # xdg.desktopEntries.zen = {
+  #   name = "Zen Browser";
+  #   genericName = "Web Browser";
+  #   exec = "zen %U";
+  #   terminal = false;
+  #   categories = ["Network" "WebBrowser"];
+  #   mimeType = [
+  #     "text/html"
+  #     "text/xml"
+  #     "application/xhtml+xml"
+  #     "x-scheme-handler/http"
+  #     "x-scheme-handler/https"
+  #   ];
+  # };
 
   xdg.mimeApps = {
     enable = true;
