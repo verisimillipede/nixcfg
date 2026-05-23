@@ -17,7 +17,8 @@ in {
         fish_add_path /home/mike/.emacs.d/bin
       '';
 
-      functions.cwd.body = ''
+      functions.y = {
+        body = ''
         function y
           set tmp (mktemp -t "yazi-cwd.XXXXXX")
           command yazi $argv --cwd-file="$tmp"
@@ -28,6 +29,9 @@ in {
         end
       '';
 
+
+
+        
       interactiveShellInit = ''
         set -gx EDITOR emacsclient
         set -gx VISUAL emacsclient
