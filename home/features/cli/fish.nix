@@ -85,7 +85,6 @@ in {
         # Quick Access
         c = "clear";
         h = "history";
-        y = "yazi";
 
         # Zealot + Django
         zz = "cd /home/mike/Code/zealot/";
