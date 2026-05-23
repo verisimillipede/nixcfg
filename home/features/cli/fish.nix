@@ -17,6 +17,17 @@ in {
         fish_add_path /home/mike/.emacs.d/bin
       '';
 
+      functions = ''
+        function y
+          set tmp (mktemp -t "yazi-cwd.XXXXXX")
+          command yazi $argv --cwd-file="$tmp"
+          if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+            builtin cd -- "$cwd"
+          end
+          command rm -f -- "$tmp"
+        end
+      '';
+
       interactiveShellInit = ''
         set -gx EDITOR emacsclient
         set -gx VISUAL emacsclient
