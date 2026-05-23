@@ -37,7 +37,7 @@ in {
       interactiveShellInit = ''
         set -gx EDITOR emacsclient
         set -gx VISUAL emacsclient
-        set -gx BROWSER zen
+        set -gx BROWSER zen-beta
         set -gx TERMINAL kitty
         set -gx HOME /home/mike
         set -gx XDG_CONFIG_HOME $HOME/.config
