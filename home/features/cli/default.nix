@@ -99,7 +99,7 @@
     # nodejs_22
     # poetry
     python314
-    pipx
+    # pipx
     stylua
 
     # System Utilities
