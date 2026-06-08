@@ -49,6 +49,9 @@ in {
       '';
 
       shellAbbrs = {
+        # Open systemctl-tui
+        st = "systemctl-tui";
+
         # List Directory Contents
         ls = "eza";
         ll = "eza -l --icons --git -a";
