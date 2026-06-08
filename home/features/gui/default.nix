@@ -34,7 +34,6 @@
     calibre
 
     # Productivity and Office
-    bitwarden-desktop
     obsidian
     libreoffice-still
     maestral
