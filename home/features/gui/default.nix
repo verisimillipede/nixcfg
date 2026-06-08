@@ -18,7 +18,7 @@
     zotero
     zoom-us
     orca-slicer
-    bambu-studio
+    # bambu-studio
     sioyek
     gnome-extension-manager
     gnomeExtensions.pano
