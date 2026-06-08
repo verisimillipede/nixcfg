@@ -61,6 +61,7 @@
       "x-scheme-handler/http" = ["zen.desktop"];
       "x-scheme-handler/https" = ["zen.desktop"];
       "video/mp4" = [ "mpv.desktop" ];
+      "video/mov" = [ "mpv.desktop" ];
       "video/x-matroska" = [ "mpv.desktop" ];
       "video/webm" = [ "mpv.desktop" ];
     };
