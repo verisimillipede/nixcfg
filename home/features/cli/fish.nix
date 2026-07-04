@@ -49,6 +49,9 @@ in {
       '';
 
       shellAbbrs = {
+        sys = "systemctl-tui";
+        ssys = "sudo systemctl-tui";
+
         # List Directory Contents
         ls = "eza";
         ll = "eza -l --icons --git -a";
@@ -116,8 +119,6 @@ in {
         nv = "nvim .";
         ns = "nvim -S Session.vim";
         nxv = "nix run ~/dotfiles/nixvim";
-        vi = "nvim";
-        vim = "nvim";
         lv = "NVIM_APPNAME='lazyvim' nvim";
         ks = "NVIM_APPNAME='kickstart' nvim";
 

@@ -32,6 +32,7 @@
     git.signing.format = null;
   };
   home.packages = with pkgs; [
+    ruby
     vim
     nixfmt
     bc
