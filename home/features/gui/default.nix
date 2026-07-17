@@ -5,7 +5,7 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
-    miktex
+    texliveFull
     auctex
     digikam
     firefox
