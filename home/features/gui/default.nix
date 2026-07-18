@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     # Browsers and Communication
     texliveFull
+    rapidraw
     auctex
     digikam
     firefox
