@@ -5,7 +5,7 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
-    rapidraw
+    miktex
     auctex
     digikam
     firefox
@@ -14,7 +14,6 @@
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     djlint
     obs-studio
-    tetex
     vale
     zotero
     zoom-us
