@@ -14,6 +14,7 @@ in {
       shellInit = ''
         set -U fish_greeting
         fish_add_path /home/mike/.local/bin
+        fish_add_path /home/mike/.local/share
         fish_add_path /home/mike/.emacs.d/bin
       '';
 
@@ -49,8 +50,8 @@ in {
       '';
 
       shellAbbrs = {
-        # Open systemctl-tui
-        st = "systemctl-tui";
+        sys = "systemctl-tui";
+        ssys = "sudo systemctl-tui";
 
         # List Directory Contents
         ls = "eza";
@@ -119,8 +120,6 @@ in {
         nv = "nvim .";
         ns = "nvim -S Session.vim";
         nxv = "nix run ~/dotfiles/nixvim";
-        vi = "nvim";
-        vim = "nvim";
         lv = "NVIM_APPNAME='lazyvim' nvim";
         ks = "NVIM_APPNAME='kickstart' nvim";
 
