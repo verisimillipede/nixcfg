@@ -7,7 +7,6 @@
     # Browsers and Communication
     harper
     texliveFull
-    texliveFull
     rapidraw
     auctex
     digikam
