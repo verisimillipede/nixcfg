@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
+    wike
     harper
     texliveFull
     rapidraw
