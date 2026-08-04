@@ -4,9 +4,7 @@
   inputs,
   outputs,
   pkgs,
-  .
-
-    ..
+  ...
 }: {
   imports = [
     ./users
