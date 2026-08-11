@@ -32,6 +32,7 @@
     git.signing.format = null;
   };
   home.packages = with pkgs; [
+    mermaid-cli
     ruby
     vim
     ffmpeg
