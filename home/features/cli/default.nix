@@ -32,6 +32,8 @@
     git.signing.format = null;
   };
   home.packages = with pkgs; [
+    deno
+    hledger
     mermaid-cli
     ruby
     vim
