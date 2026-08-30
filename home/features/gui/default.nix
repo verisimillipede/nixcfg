@@ -5,6 +5,8 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
+    zotero
+    wike
     harper
     texliveFull
     rapidraw
