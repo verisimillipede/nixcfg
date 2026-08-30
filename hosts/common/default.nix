@@ -131,6 +131,10 @@
           path = "/home/mike/.spacemacs.d";
           devices = ["backup-server" "server" "computer" "laptop"];
         };
+        "Yazi" = {
+          path = "/home/mike/.config/yazi";
+          devices = ["backup-server" "server" "computer" "laptop"];
+        };
       };
       options = {
         globalAnnounceEnabled = true;
