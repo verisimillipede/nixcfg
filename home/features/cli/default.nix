@@ -32,7 +32,6 @@
     git.signing.format = null;
   };
   home.packages = with pkgs; [
-    weasyprint
     deno
     hledger
     mermaid-cli
