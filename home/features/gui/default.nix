@@ -5,6 +5,8 @@
 }: {
   home.packages = with pkgs; [
     # Browsers and Communication
+    geogebra
+    geogebra6
     zotero
     wike
     harper
