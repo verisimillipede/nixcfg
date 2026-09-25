@@ -40,7 +40,6 @@
 
     # Productivity and Office
     obsidian
-    libreoffice-still
     maestral
     maestral-gui
 
