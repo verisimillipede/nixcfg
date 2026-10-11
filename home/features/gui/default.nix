@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
     # Browsers and Communication
     geogebra6
-    zotero
+    # zotero #broken right now....
     wike
     harper
     texliveFull
