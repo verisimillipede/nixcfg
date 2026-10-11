@@ -12,15 +12,14 @@
     texliveFull
     rapidraw
     auctex
-    digikam
+    # digikam
     firefox
     google-chrome
-    thunderbird
+    # thunderbird
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     djlint
     obs-studio
     vale
-    zotero
     zoom-us
     orca-slicer
     # bambu-studio
