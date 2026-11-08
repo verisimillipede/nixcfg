@@ -12,6 +12,11 @@
     ../common/disko-config.nix
   ];
 
+  # zotero does not work with new firefox bin
+  nixpkgs.config.permittedInsecurePackages = [
+    "firefox-esr-140-bin-unwrapped-140.17.0esr"
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
