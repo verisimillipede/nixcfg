@@ -3,6 +3,12 @@
   inputs,
   ...
 }: {
+  
+  # zotero does not work with new firefox bin
+  nixpkgs.config.permittedInsecurePackages = [
+    "firefox-esr-140-bin-unwrapped-140.17.0esr"
+  ];
+
   home.packages = with pkgs; [
     # Browsers and Communication
     geogebra6
