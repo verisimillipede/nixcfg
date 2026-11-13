@@ -67,8 +67,9 @@
       # wlroots -> "wlroots-" -> wlroots-portals.conf file
       wlroots = {
       };
+    };
   };
-    xdg.configFile = {
+  xdg.configFile = {
       "xdg-desktop-portal-termfilechooser/config" = {
         force = true;
         executable = true;
@@ -83,7 +84,7 @@
           save_mode=last
         '';
       };
-    };
+  };
   xdg.desktopEntries.zen = {
     name = "Zen-Beta";
     genericName = "Web Browser";
