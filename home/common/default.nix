@@ -37,54 +37,54 @@
     TERMINAL = "kitty";
   };
 
-  xdg.portal = {
-    enable = true;
+  # xdg.portal = {
+  #   enable = true;
 
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-wlr
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-termfilechooser
-    ];
+  #   extraPortals = with pkgs; [
+  #     xdg-desktop-portal-wlr
+  #     xdg-desktop-portal-gtk
+  #     xdg-desktop-portal-termfilechooser
+  #   ];
 
-    config = {
-      # to find XDG files : got to the {hash} of the new version and find file named xdg-desktop*
-      # .services files are located : /etc/profiles/per-user/...{user}.../share/systemd/user
+  #   config = {
+  #     # to find XDG files : got to the {hash} of the new version and find file named xdg-desktop*
+  #     # .services files are located : /etc/profiles/per-user/...{user}.../share/systemd/user
 
-      # pattern :
-      # {name} -> "{name}-" -> {name}-portals.conf file
+  #     # pattern :
+  #     # {name} -> "{name}-" -> {name}-portals.conf file
 
-      # common -> empty -> portals.conf file
-      common = {
-        default = [ "gtk" ];
-        "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
-        "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
-        "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
-        "org.freedesktop.impl.portal.Inhibit" = [ "none" ];
+  #     # common -> empty -> portals.conf file
+  #     common = {
+  #       default = [ "gtk" ];
+  #       "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
+  #       "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
+  #       "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
+  #       "org.freedesktop.impl.portal.Inhibit" = [ "none" ];
 
-        "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
-      };
+  #       "org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+  #     };
 
-      # wlroots -> "wlroots-" -> wlroots-portals.conf file
-      wlroots = {
-      };
-    };
-  };
-  xdg.configFile = {
-      "xdg-desktop-portal-termfilechooser/config" = {
-        force = true;
-        executable = true;
-        text = ''
-          [filechooser]
-          cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
-          default_dir=$HOME/downloads
-          create_help_file=1
-          env=TERMCMD='kitty --title filechooser'
-          env=PATH="$PATH:/run/current-system/sw/bin"
-          open_mode=suggested
-          save_mode=last
-        '';
-      };
-  };
+  #     # wlroots -> "wlroots-" -> wlroots-portals.conf file
+  #     wlroots = {
+  #     };
+  #   };
+  # };
+  # xdg.configFile = {
+  #     "xdg-desktop-portal-termfilechooser/config" = {
+  #       force = true;
+  #       executable = true;
+  #       text = ''
+  #         [filechooser]
+  #         cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
+  #         default_dir=$HOME/downloads
+  #         create_help_file=1
+  #         env=TERMCMD='kitty --title filechooser'
+  #         env=PATH="$PATH:/run/current-system/sw/bin"
+  #         open_mode=suggested
+  #         save_mode=last
+  #       '';
+  #     };
+  # };
   xdg.desktopEntries.zen = {
     name = "Zen-Beta";
     genericName = "Web Browser";
