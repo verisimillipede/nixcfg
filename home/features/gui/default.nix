@@ -10,6 +10,8 @@
   ];
 
   home.packages = with pkgs; [
+    # set yazi as default file picker]
+    xdg-desktop-portal-termfilechooser
     # Browsers and Communication
     geogebra6
     zotero #broken right now....
